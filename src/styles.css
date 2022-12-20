@@ -27,17 +27,11 @@ p {
   margin-bottom: 4rem;
 }
 
-.h1, .h2, h1, h2 {
-  margin-top: 0!important;
+.card__body h2 {
+  margin-top: 0;
+  font-size: 3rem;
+  font-weight: 700;
 }
-
-/* h3{
- font-weight: 800;
-}
-
-h4{
- font-size: 1.2rem;
-} */
 
 img {
   max-width: 100%;
@@ -79,16 +73,6 @@ input:focus, textarea:focus{
 p a {
   text-decoration:  underline solid #34a39e 10%!important;
   text-underline-offset: 10px;
-}
-
-.row {
-  margin-right: 0;
-  margin-left: 0;
-  font-size: 1.4rem;
-}
-
-.col-5, .col-6, .col-7 {
-  width: 100%;
 }
 
 .card {

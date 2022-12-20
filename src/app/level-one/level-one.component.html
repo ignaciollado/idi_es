@@ -12,6 +12,7 @@
       
     <div>
       <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
+      
     </div>
 
     <div class="card__body" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/') | highlightSearchTerm:searhcTerm">
@@ -21,11 +22,17 @@
 
 </div>
 
+<small class="barra_meta">Links:</small>
+        <ul class="enlaces__relacionados">
+            <li><a class="noticia-tag-item" target="_blank" href="{{unaNoticiaAttribute.urls.urla}}">{{unaNoticiaAttribute.urls.urlatext}}</a></li>
+            <li><a class="noticia-tag-item" target="_blank" href="{{unaNoticiaAttribute.urls.urlb}}">{{unaNoticiaAttribute.urls.urlbtext}}</a></li>
+            <li><a class="noticia-tag-item" target="_blank" href="{{unaNoticiaAttribute.urls.urlc}}">{{unaNoticiaAttribute.urls.urlctext}}</a></li>
+        </ul>
 <small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
 <div class="noticia-tag">
-<div *ngFor="let item of unaNoticiaAttribute.tags | keyvalue">
-  <a class="noticia-tag-item" routerLink="/idi-result-list/{{item.value}}">{{item.value}}</a>
-</div>
+  <div *ngFor="let item of unaNoticiaAttribute.tags | keyvalue">
+    <a class="noticia-tag-item" routerLink="/idi-result-list/{{item.value}}">{{item.value}}</a>
+  </div>
 </div>
 <hr>
 
