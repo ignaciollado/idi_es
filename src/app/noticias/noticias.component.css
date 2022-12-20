@@ -21,15 +21,15 @@
   border: none;
   margin-bottom: 2rem;
 }
-.card:hover {
+/* .card:hover {
   border: 1px solid;
   box-shadow: 5px 10px 8px #888888;
-}  
+}   */
 
 .card-head {
   grid-area: image;
   margin-bottom: .5rem;
-  max-width: 262px; /* se lo tengo que poner porque las imágenes que usan son de 268px */
+  /* max-width: 262px; */ /* se lo tengo que poner porque las imágenes que usan son de 268px */
 }
 
 .card-body {

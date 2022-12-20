@@ -12,7 +12,9 @@ import { FormacionAgendaIdiComponent } from './formacion-agenda-idi/formacion-ag
 import { FormacionWebinarsIdiComponent } from './formacion-webinars-idi/formacion-webinars-idi.component';
 import { MenuHomeIdiComponent } from "./menu-home-idi/menu-home-idi-component";
 import { TransparenciaIdiComponent } from './transparencia-idi/transparencia-idi.component';
-import { SectoresIdiComponent } from './sectores-idi/sectores-idi.component';
+
+/* import { SectoresIdiComponent } from './sectores-idi/sectores-idi.component'; */
+
 import { NoticiasComponent } from './noticias/noticias.component';
 import { ContentIdiComponent } from './content-idi/content-idi.component';
 import { MenuFooterIdiComponent } from './menu-footer-idi/menu-footer-idi.component';
@@ -23,6 +25,7 @@ import { MenuHomeEmprendedorDetailComponent } from './menu-home-emprendedor-deta
 import { ReempresaIdiComponent } from './reempresa-idi/reempresa-idi.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { TransparencyDetailComponent } from './transparency-detail/transparency-detail.component';
+import { LevelOneComponent } from './level-one/level-one.component';
 
 const routes: Routes = [
 
@@ -33,6 +36,7 @@ const routes: Routes = [
     { path: 'idi-featured-detail/:id', title: 'Destacats IDI', component: FeaturedIdiDetailComponent },
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
     { path: 'idi-detail/:id', component: NoticiaDetailComponent },
+    { path: 'idi-level-one/:id', component:LevelOneComponent},
     { path: 'feder-detail/:id', component: FederDetailComponent },
 
     { path: 'idi-transparency-detail/:id', component: TransparencyDetailComponent },
@@ -44,13 +48,13 @@ const routes: Routes = [
 
     { path: 'show-menu-option/:id', title: 'Detall del contingut IDI', component: MenuHomeIdiComponent },
 
-    { path: 'emprendedor-creacion-empresa/:id', component: MenuHomeIdiComponent },
+/*     { path: 'emprendedor-creacion-empresa/:id', component: MenuHomeIdiComponent },
     { path: 'emprendedor-disenyo/:id', component: MenuHomeIdiComponent },
     { path: 'emprendedor-registro-marca-producto/:id', component: MenuHomeIdiComponent },
     { path: 'emprendedor-reempresa/:id', component: MenuHomeIdiComponent },
-    { path: 'emprendedor-vivero-coworking/:id', component: MenuHomeIdiComponent },
+    { path: 'emprendedor-vivero-coworking/:id', component: MenuHomeIdiComponent }, */
 
-    { path: 'empresa-internacionalizacion/:id', component: MenuHomeIdiComponent },
+/*     { path: 'empresa-internacionalizacion/:id', component: MenuHomeIdiComponent },
     { path: 'empresa-reempresa/:id', component: MenuHomeIdiComponent },
     { path: 'empresa-registro-marca-producto/:id', component: MenuHomeIdiComponent },
     { path: 'empresa-digitalizacion/:id', component: MenuHomeIdiComponent },
@@ -58,17 +62,17 @@ const routes: Routes = [
     { path: 'empresa-sostenibilidad/:id', component: MenuHomeIdiComponent },
     { path: 'empresa-financiacion/:id', component: MenuHomeIdiComponent },
     { path: 'empresa-clusters/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-disenyo/:id', component: MenuHomeIdiComponent },
+    { path: 'empresa-disenyo/:id', component: MenuHomeIdiComponent }, */
 
-    { path: 'sectores-comercio/:id', component: SectoresIdiComponent },
+/*     { path: 'sectores-comercio/:id', component: SectoresIdiComponent },
     { path: 'sectores-moda/:id', component: SectoresIdiComponent },
     { path: 'sectores-nautica/:id', component: SectoresIdiComponent },
     { path: 'sectores-habitat/:id', component: SectoresIdiComponent },
     { path: 'sectores-agroalimentario/:id', component: SectoresIdiComponent },
-    { path: 'sectores-industria/:id', component: SectoresIdiComponent },
+    { path: 'sectores-industria/:id', component: SectoresIdiComponent }, */
 
-    { path: 'sectors-idi-hlp-detail/:id/:idCat', component: MenuHomeEmprendedorDetailComponent },
-    { path: 'sectors-idi-srv-detail/:id/:idCat', component: MenuHomeEmprendedorDetailComponent },
+/*     { path: 'sectors-idi-hlp-detail/:id/:idCat', component: MenuHomeEmprendedorDetailComponent },
+    { path: 'sectors-idi-srv-detail/:id/:idCat', component: MenuHomeEmprendedorDetailComponent }, */
 
     { path: 'reempresa-reempresa/:id/:col', component: ReempresaIdiComponent },
 
