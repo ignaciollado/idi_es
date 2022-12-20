@@ -1,0 +1,31 @@
+<div class="detail-article-container" *ngIf="unArticuloAttribute">
+    <img class="cabecera" src="{{cabecera}}" alt="{{cabecera}}" title="{{cabecera}}">
+
+    <div class="card" *ngIf="unArticuloAttribute.images.image_fulltext; else simpleShow">
+        <div class="card-title">
+            <h2>{{unArticuloAttribute.title}}</h2>
+        </div>
+
+        <div class="card-head" *ngIf="unArticuloAttribute.images.image_fulltext">
+            <img src={{unArticuloAttribute.images.image_fulltext}} alt={{unArticuloAttribute.title}} title={{unArticuloAttribute.title}}>
+        </div>
+        
+        <div class="card-body">
+            <div [innerHTML]="unArticuloAttribute.text.replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/').replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/show-article-detail-content') | highlightSearchTerm:searhcTerm"></div>
+        </div>
+    </div>
+
+    <ng-template #simpleShow>
+        <div class="card-body" [innerHTML]="unArticuloAttribute.text.replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/').replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/show-article-detail-content') | highlightSearchTerm:searhcTerm"></div>
+    </ng-template>
+</div>
+
+<small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
+    <div class="noticia-tag">
+        <div *ngFor="let item of unArticuloAttribute.tags | keyvalue">
+            <a routerLink="/idi-result-list/{{item.value}}">-{{item.value}}-</a>
+        </div>
+    </div>
+    <hr>
+<div *ngIf="!unArticuloAttribute"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
+

@@ -1,0 +1,28 @@
+
+    <div class="last-news-container" *ngIf="unaNoticiaAttribute"> 
+        <img src="../../assets/images/cabeceras/industria_idi.webp" alt="Cabecera destacados IDI" title="Cabecera destacados IDI" />
+        <div class="card">
+         
+              <div class="card-head">
+              
+                  <img src={{unaNoticiaAttribute.images.image_fulltext}} alt={{unaNoticiaAttribute.title}} title={{unaNoticiaAttribute.title}} >
+            
+              </div>
+              <div class="card-body">
+  
+                  <h1 class="card-title">{{unaNoticiaAttribute.title}}</h1>
+                  <h6 class="card-date">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h6>
+                  <p [innerHTML]="unaNoticiaAttribute.text"></p>
+            
+              </div>
+  
+              <div class="card-footer">
+                
+                  {{unaNoticiaAttribute.tags}}
+  
+              </div>
+  
+        </div>
+    
+     </div>
+     <div *ngIf="!unaNoticiaAttribute">One moment please, loading details ...</div>

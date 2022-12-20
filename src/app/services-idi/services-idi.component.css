@@ -1,0 +1,58 @@
+.idi-services {
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.services-idi-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+.card {
+    max-height: 21rem;
+    min-height: 21rem; 
+    background-color: rgb(162, 211, 218);
+    border: 1px dotted rgb(0, 0, 0);
+    border-radius: 0;
+    opacity: 1.0;
+  }
+.card:hover{
+    opacity: 0.9;
+  }
+.card-head {
+    margin-top: 2.5rem;
+
+  }
+.card-body {
+    margin-bottom: .5rem;
+    padding: 1rem;
+  }
+.card-date {
+    font-weight: 100;
+  }
+.card-footer {
+    max-height: 3rem;
+    min-height: 3rem;
+  }
+h4 {
+    padding-left: 1rem;
+    font-weight: 800;
+  } 
+p {
+    font-weight: 300;
+  }
+  a:hover {
+    opacity: .9;
+    color:#fff!important;
+    text-decoration: dotted!important;
+  }  
+@media only screen and (max-width: 795px) {
+    .services-idi-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }

@@ -1,0 +1,93 @@
+.card {
+    display: grid;
+    grid-template-areas: "imagen texto";
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    gap: .4rem;
+    border: 1px solid #fff;
+}
+
+.card-head {
+    grid-area: imagen;
+    max-width: 451px;
+}
+
+.card-body {
+    grid-area: texto;
+    padding-left: 2rem;
+    line-height: 2.6rem;
+    font-size: 1.8rem;
+}
+
+.card-title, .card-date{
+    margin-bottom: 2rem;
+}
+
+small {
+    font-weight: 800;
+}
+
+a {
+    font-weight: 300;
+    background-color: #7e7e7c;
+    color: #fff!important;
+    padding: .3rem .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.card a:hover {
+    opacity: .8;
+    color:#a3d4db!important;
+    text-decoration: underline none #a3d4db 30%!important;
+}
+
+mark {
+    background-color: rgb(240, 162, 68);
+    color: white;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    border-radius: 2px;
+}
+img {
+    width: 100%;
+    max-width: 451px;
+    height: auto;
+}
+
+.noticia-tag{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 3rem;
+}
+
+.barra_meta {
+    border-bottom: 5px solid #ededed;
+    display: block;
+    padding: 5px 0 0 0;
+    margin: 0 0 20px 0;
+}
+
+@media only screen and (max-width: 795px) {
+    .card{
+        grid-template-areas: "imagen" "texto";
+    }
+    .card-body {
+        padding-left: 0;
+    }
+    .card-head{
+        margin-bottom: 2rem;
+    }
+}
+
+.noticia-tag{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.noticia-tag-item {
+    flex: 1;
+    margin: 0 .5rem;
+}

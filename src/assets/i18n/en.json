@@ -1,0 +1,22 @@
+{
+    "Title": "Instituto de Innovación Empresarial de las Islas Baleares",
+    "Name": "Name",
+    "Email": "Email",
+    "Mobile": "Mobile",
+    "Update": "Update",
+    "Error": "Please, set the required values.",
+
+    "Emprendedor": "Emprendedor",
+    "Empresa": "Empresa",
+    "Sectores": "Sectores",
+    "Ayudas_Subv": "Ayudas y subvenciones",
+    "Formacion": "Formación",
+    "Transparencia": "Transparencia",
+    "Sede_Elect": "Sede electrónica",
+
+    "noticiasTitle": "News",
+
+    "gettingFeaturedIDI": "Getting featured data from IDI ...",
+    "descubreServiciosIDI": "Descubre nuestros servicios para empresas y emprendedores",
+    "NewsLetterSubs": "Subscribe to our newsletter:"
+  }

@@ -1,0 +1,25 @@
+<div class="detail-news-container" *ngIf="unaNoticiaAttribute">
+  <img src="../../assets/images/logos/logo_FEDER_Balears.png" alt="Cabecera Fondos FEDER" title="Cabecera fondos FEDER">
+  <div class="card">
+      
+      <div class="card__body">
+          <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
+          <h6 class="card__date barra_meta" *ngIf="unaNoticiaAttribute.images.image_fulltext">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h6>
+      
+          <div class="card__text" [innerHTML]="unaNoticiaAttribute.text.replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/feder-detail/') | highlightSearchTerm:searhcTerm"></div>            
+      </div>
+
+
+
+
+
+  </div>
+</div>
+<small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
+   <div class="noticia-tag">
+      <div *ngFor="let item of unaNoticiaAttribute.tags | keyvalue">
+          <a class="noticia-tag-item" routerLink="/idi-result-list/{{item.value}}">{{item.value}}</a>
+      </div>
+  </div>
+  <hr>
+<div *ngIf="!unaNoticiaAttribute"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>

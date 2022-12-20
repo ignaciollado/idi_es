@@ -1,0 +1,55 @@
+
+<div class="contenidos-idi" *ngIf="contenidos">
+  <div *ngIf="contenidos.data.attributes.images.image_fulltext; else simpleShow">
+    <img class="cabecera" src="{{cabecera}}" alt="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" title="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" >
+    <h2 [innerHTML]="contenidos.data.attributes.title"></h2><hr>
+      <div class="card">
+        <div class="card-head">
+            <img src={{contenidos.data.attributes.images.image_fulltext}} alt={{contenidos.data.attributes.title}} title={{contenidos.data.attributes.title}} >
+        </div>
+        <div class="card-body" [innerHTML]="contenidos.data.attributes.text">
+        </div>
+      </div>
+  </div>
+  <ng-template #simpleShow>
+    <img class="cabecera" src="{{cabecera}}" alt="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" title="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" >
+    <div class="detail-text" [innerHTML]="contenidos.data.attributes.text"></div>
+  </ng-template>
+</div>
+
+<ng-template [ngIf]="stringMessage == 'One moment, opening iframe agenda ...'">Agenda</ng-template>
+
+<ng-template [ngIf]="stringMessage == 'One moment, opening iframe ayudas subvenciones ...'">
+  <div *ngIf="currentLang ==='ca-ES'">
+    <iframe width="100%" height="1024px" src="https://utils.idi.es/index.php/ayud_subv/muestraEnIframe/ca" frameborder="0" laoding="lazy" scrolling="yes"></iframe>
+  </div>
+  <div *ngIf="currentLang ==='es-ES'">
+    <iframe width="100%" height="1024px" src="https://utils.idi.es/index.php/ayud_subv/muestraEnIframe/es" frameborder="0" laoding="lazy" scrolling="yes"></iframe>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="stringMessage === 'One moment, opening iframe reemprendedor ...'">
+  <img class="cabecera" src="{{cabecera}}" alt="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" title="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" >
+  <div *ngIf="currentLang ==='ca-ES'">
+    <h2>Anuncis de reemprenedors/es:</h2><hr>
+    <iframe id="ext_iframe" src="https://ads.reempresa.org/reempresa/cercador_anuncis_bts.aspx?ps=r&orig=R_IBL" frameborder="0" scrolling="yes" style="width:100%; overflow:hidden; border:0; padding: 0; background-color: transparent;" height="2228px"></iframe>
+  </div>
+  <div *ngIf="currentLang ==='es-ES'">
+    <h2>Anuncios de reemprendedores/as:</h2><hr>
+    <iframe id="ext_iframe" src="https://ads.reempresa.org/reempresa/cercador_anuncis_bts.aspx?ps=r&orig=R_IBL" frameborder="0" scrolling="yes" style="width:100%; overflow:hidden; border:0; padding: 0; background-color: transparent;" height="2228px"></iframe>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="stringMessage === 'One moment, opening iframe cedentes ...'">
+  <img class="cabecera" src="{{cabecera}}" alt="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" title="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" >
+  <div *ngIf="currentLang ==='ca-ES'">
+    <h2>Anuncis d'empreses a la venda:</h2><hr>
+    <iframe id="ext_iframe" src="https://ads.reempresa.org/reempresa/cercador_anuncis_bts.aspx?ps=c&orig=R_IBL" frameborder="0" scrolling="yes" style="width:100%; overflow-x:hidden; border:0; padding: 0; background-color: transparent;" height="2228px"></iframe> 
+  </div>
+  <div *ngIf="currentLang ==='es-ES'">
+    <h2>Anuncios de empresas a la venta:</h2><hr>
+      <iframe id="ext_iframe" src="https://ads.reempresa.org/reempresa/cercador_anuncis_bts.aspx?ps=c&orig=R_IBL" frameborder="0" scrolling="yes" style="width:100%; overflow-x:hidden; border:0; padding: 0; background-color: transparent;" height="2228px"></iframe>
+  </div>
+</ng-template>
+
+<div *ngIf="!contenidos">{{stringMessage}}</div>

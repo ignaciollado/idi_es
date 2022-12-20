@@ -1,0 +1,93 @@
+.cabecera{
+    max-width: 1110px;
+    height: auto;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.card {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-areas: "imagen texto";
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    gap: .4rem;
+}
+.card-head{
+    grid-area: imagen;
+}
+.card-body{
+    grid-area: texto;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+.card-head img{
+    width: 100%;
+    max-width: 417px;
+    height: auto;
+}
+.card-body p {
+    padding-right: 1rem;
+}
+.card a:hover {
+    opacity: .8;
+    color:#a3d4db!important;
+    text-decoration: none!important;
+  }
+h2{
+    text-align: left;
+    font-weight: 600;
+}
+h3{
+    padding-left: 0!important;
+    margin-top: 0!important;
+}
+span {
+    color: #194e60;
+}
+p {
+    font-weight: 300;
+}
+.detail-text{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+.detail-text > ul {
+    padding-left: 2rem;
+}
+@media only screen and (max-width: 795px) {
+    .contenidos-idi {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .sectores-ayuda-idi {
+        grid-template-areas: 'imagen' 'title' 'texto';
+        margin-left: 2rem;
+    }
+    .sectores-otros-servicios {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .sectores-otros-servicios img {
+        width: 100%;
+        max-width: 351px;
+        height: auto;
+    }
+    .card{
+        grid-template-areas: "imagen" "texto";
+    }
+    .card-head {
+        /* text-align: left; */
+        max-width: 174px; /* se lo tengo que poner porque las imágenes que usan son de distintos tamaños */
+    }
+    h4{
+        text-align: center;
+    }
+    .card-body {
+      max-height: auto;
+      min-height: auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }  

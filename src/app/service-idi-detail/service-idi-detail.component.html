@@ -1,0 +1,30 @@
+
+<img class="cabecera" src="../../assets/images/cabeceras/{{cabecera}}" alt="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" title="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI">    
+
+<div class="service-idi-container" *ngIf="contenidos_txt">
+  <div *ngFor="let contenido_txt of contenidos_txt">
+      <h1>{{contenido_txt.attributes.title}}</h1>
+       <div class="service-idi-text" [innerHTML]='contenido_txt.attributes.text.replaceAll("*", "&#10003;").replaceAll("images/","https://contents.idi.es/images/")'> </div>
+  </div>
+</div>
+<div *ngIf="!contenidos_txt"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
+
+<!-- ¿Cómo te ayuda el IDI -->
+<h2>{{'comoAyudaIDI' | translate}}</h2>
+<div class="services-ayuda-idi" *ngIf="contenidos_hlp"> 
+  <div *ngFor="let contenido_hlp of contenidos_hlp">
+    <div class="card">
+    <a routerLink="/emprendedor-empresa-idi-detail/{{contenido_hlp.id}}">
+      <div class="card-head">
+          <img src={{contenido_hlp.attributes.images.image_intro}} alt={{contenido_hlp.attributes.title}} title={{contenido_hlp.attributes.title}}>
+      </div>
+      <div class="card-body">
+          <h3 class="card-title">{{contenido_hlp.attributes.title}}</h3>
+          <p [innerHTML]="contenido_hlp.attributes.text.substring( 0,contenido_hlp.attributes.text.search('</p>') )"></p>
+      </div>
+    </a>
+    </div>
+  </div>
+</div>
+<div *ngIf="!contenidos_hlp"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
+

@@ -1,0 +1,47 @@
+
+<div [hidden]="submitted">
+    <h6><strong>{{'newsLetterSubscription' | translate}}</strong></h6>
+    
+    <div class="contact-form">
+      <form [formGroup]="newsLetterForm" (ngSubmit)="onSubmit(newsLetterForm)" novalidate>
+
+        <div class="input-group margin-bottom-sm"><i *ngIf="spinner" class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
+          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input [class.is-invalid] = "primaryEmail.invalid && primaryEmail.touched" placeholder="{{'Email' | translate}}"
+          type="email" class="form-control" formControlName="primaryEmail" />
+         
+        </div>
+        <div *ngIf="(primaryEmail.invalid && primaryEmail.touched) || primaryEmail.dirty">
+          <small *ngIf="primaryEmail.errors?.['required']" class="is-invalid-lbl">{{'Email' | translate}} <strong>{{'isRequired' | translate}}</strong></small>
+          <!--question mark(?) is a safe navigation operator-->
+          <small *ngIf="primaryEmail.errors?.['pattern']" class="is-invalid-lbl">Please provide a valid {{'Email' | translate}}</small>
+      </div>
+        <div class="form-group form-check">
+          <input [class.is-invalid] = "acceptTerms.invalid && acceptTerms.touched"
+            type="checkbox"
+            formControlName="acceptTerms"
+            class="form-check-input" />
+  
+          <label for="acceptTerms" class="form-check-label"><a class="a_footer" routerLink="/politica-de-privacidad/351">{{'acceptTerms' | translate}}</a></label>
+          <div *ngIf="(acceptTerms.invalid && acceptTerms.touched) || acceptTerms.dirty">
+            <small *ngIf="acceptTerms.errors?.['required']" class="is-invalid-lbl">{{'acceptTerms' | translate}} <strong>{{'isRequired' | translate}}</strong></small>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" [disabled]="!newsLetterForm.valid">{{'send' | translate}}</button>
+        </div>
+      </form>
+    </div>
+  </div>  
+  <div [hidden]="!submitted" class="submitted-data">
+    <div class="contact-form">
+        <h3>{{'inscriptionOK' | translate}}</h3>
+
+        <div class="row">
+            <div class="col-xs-5">{{'Email' | translate}}</div>
+            <div class="col-xs-7">{{ newsLetterForm.value.primaryEmail }}</div>
+        </div>
+    
+    </div>
+  </div>
+  <div>{{messageService.messages}}</div>

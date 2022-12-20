@@ -1,0 +1,24 @@
+<h1>{{searchTerm}}</h1>
+
+<div class="search-result-container" *ngIf="contenidos"> 
+  
+  <div *ngFor="let contenido of contenidos">
+
+    <div class="card">
+      <a [routerLink]="['/idi-search-detail', contenido.id, searchTerm]" [urlUpdateStrategy]="eager">
+        <div class="card-head">
+          <img src={{contenido.attributes.images.image_intro}} alt={{contenido.attributes.title}} title={{contenido.attributes.title}}>
+        </div>
+        <div class="card-body" ng-bind-html="contenido.attributes.title | highlight:searchTerm">
+          <h4 class="card-title" [innerHTML]="contenido.attributes.title | highlightSearchTerm:searchTerm"></h4>
+        </div>
+        <div class="card-footer">
+          <h6 class="card-date">{{contenido.attributes.created | date: 'dd/MM/yyyy'}}</h6>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+ </div>
+ <div *ngIf="!contenidos"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>

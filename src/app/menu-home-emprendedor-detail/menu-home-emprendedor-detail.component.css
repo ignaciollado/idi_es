@@ -1,0 +1,48 @@
+.cabecera {
+    width: 100%;
+    height: auto;
+    border: #a3d4db 1px solid;
+}
+.detail-text > td, th {
+    padding: 1rem!important;
+}
+.card {
+    display: grid;
+    grid-template-areas:    'image title' 
+                            'image text';
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    gap: .4rem;
+}
+.card-head {
+    grid-area: image;
+    margin-bottom: .5rem;
+    width: 100%;
+    max-width: 351px;
+    height: auto;
+  }
+.card-body {
+    grid-area: title;
+    line-height: 1.4285em;
+  }
+.detail-text {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+}
+h3 {
+    margin-top: 0;
+}
+@media only screen and (max-width: 795px) {
+    .card {
+        grid-template-areas:    'image title' 
+                                'text text';
+    }
+    .menu-texto-idi{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .menu-ayuda-idi{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

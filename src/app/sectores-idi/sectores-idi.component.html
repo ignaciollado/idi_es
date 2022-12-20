@@ -1,0 +1,60 @@
+<img class="cabecera" src="../../assets/images/cabeceras/{{cabecera}}" alt="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" title="Cabecera {{cabecera.replaceAll('.webp', '')}} IDI" />    
+
+<!-- pictogramas IDI -->
+<div class="sectores-pictos" *ngIf="contenidos_pictos"> 
+    <div *ngFor="let contenido_picto of contenidos_pictos">
+      <div class="card">
+        <div class="card-head">
+            <img src={{contenido_picto.attributes.images.image_intro}} alt={{contenido_picto.attributes.title}} title={{contenido_picto.attributes.title}} />
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">{{contenido_picto.attributes.title}}</h4>
+        </div>
+      </div>
+    </div>
+</div>
+<div *ngIf="!contenidos_hlp"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
+
+<!-- Cómo te ayuda el IDI -->
+<h2>{{'comoAyudaIDI' | translate}}</h2>
+<div *ngIf="contenidos_hlp"> 
+    <div *ngFor="let contenido_hlp of contenidos_hlp">
+
+      <a routerLink="/sectors-idi-hlp-detail/{{contenido_hlp.id}}/{{contenido_hlp.relationships.category.data.id}}">
+        <div class="card-hlp">
+          <div class="card-title-hlp">
+            <h3>{{contenido_hlp.attributes.title}}</h3>
+          </div>
+
+          <div class="card-text-hlp" [innerHTML]="contenido_hlp.attributes.text.substring( 0,contenido_hlp.attributes.text.search('</p>') )">
+
+          </div>
+
+          <div class="card-img-hlp">
+            <img src={{contenido_hlp.attributes.images.image_intro}} alt={{contenido_hlp.attributes.title}} title={{contenido_hlp.attributes.title}} />
+          </div>
+        </div>
+      </a>
+
+    </div>
+</div>
+<div *ngIf="!contenidos_hlp"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
+
+ <!-- Otros servicios IDI -->
+<h2>{{'otrosServiciosIDI' | translate}}</h2>
+<div class="sectores-otros-servicios" *ngIf="contenidos_otrosSrv"> 
+    <div *ngFor="let contenido_otroSrv of contenidos_otrosSrv">
+      <div class="card">
+        <a routerLink="/sectors-idi-srv-detail/{{contenido_otroSrv.id}}/{{contenido_otroSrv.relationships.category.data.id}}">
+          <div class="card-head">
+            <img src={{contenido_otroSrv.attributes.images.image_intro}} alt={{contenido_otroSrv.attributes.title}} title={{contenido_otroSrv.attributes.title}} />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{contenido_otroSrv.attributes.title}}</h3>
+            <div [innerHTML]="contenido_otroSrv.attributes.text.substring( 0,contenido_otroSrv.attributes.text.search('</p>'))"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+</div>
+<div *ngIf="!contenidos_hlp"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>

@@ -1,0 +1,26 @@
+<div class="detail-search-container" *ngIf="unContenidoAttribute"> 
+<!--     <img src="../../assets/images/cabeceras/noticias_idi.webp" alt="Cabecera noticia IDI" title="Cabecera noticia IDI" /> -->
+  <div class="card" *ngIf="unContenidoAttribute.images.image_fulltext; else simpleShow">
+        <div >
+            <img class="card-head" src={{unContenidoAttribute.images.image_fulltext}}  alt={{unContenidoAttribute.title}} title={{unContenidoAttribute.title}}>
+        </div>
+        <div class="card-body">
+            <h1 class="card-title">{{unContenidoAttribute.title}}</h1>
+            <h6 class="card-date">{{unContenidoAttribute.created | date: 'dd/MM/yyyy'}}</h6>
+            <div [innerHTML]="unContenidoAttribute.text.replaceAll('images/','https://contents.idi.es/images/').replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/').replaceAll('https://idi.es/index.php/agenda_ctrl/reposit','#/formacion-webinars').replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/').replaceAll('https://idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/').replaceAll('https://www.idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/').replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/') | highlightSearchTerm:searchTerm"></div>
+        </div>
+  </div>
+  <ng-template #simpleShow>
+    <div class="detail-text" [innerHTML]="unContenidoAttribute.text.replaceAll('images/','https://contents.idi.es/images/').replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/').replaceAll('https://idi.es/index.php/agenda_ctrl/reposit','#/formacion-webinars').replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/').replaceAll('https://idi.es/index.php/sectores_contenido_texto/detalle_sectores/','/sectors-idi-hlp-detail/').replaceAll('https://www.idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/').replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/') | highlightSearchTerm:searchTerm"></div>
+  </ng-template>
+
+</div>
+<small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
+<!--  <hr> -->
+      <div class="noticia-tag">
+          <div *ngFor="let item of unContenidoAttribute.tags | keyvalue">
+              <a class="noticia-tag-item" routerLink="/idi-result-list/{{item.value}}">{{item.value}}</a>
+          </div>
+      </div>
+      <hr>
+<div *ngIf="!unContenidoAttribute"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>

@@ -1,0 +1,11 @@
+
+<div *ngIf="id!='348' && id!='349' && id!='350' && id!='351'">
+    <img class="cabecera" src="../../assets/images/cabeceras/{{cabecera}}" alt="Cabecera {{cabecera}} IDI" title="Cabecera {{cabecera}} IDI" />
+</div>
+<div  *ngIf="contenidos"> 
+    <div *ngFor="let contenido of contenidos">
+         <h1>{{contenido.attributes.title}}</h1>
+         <div class="menu-texto-idi" [innerHTML]='contenido.attributes.text.replaceAll("images/","https://contents.idi.es/images/")'> </div>
+    </div>
+</div>
+<div *ngIf="!contenidos">Getting contents from {{cabecera.replaceAll('.webp', '').replaceAll('_', ' ')}} ...</div>

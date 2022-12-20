@@ -1,0 +1,115 @@
+.cabecera{
+    max-width: 1110px;
+    height: auto;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.reempresa-pictos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    gap: .4rem;
+}
+.reempresa-pictos img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+.reempresa-ayuda-idi{
+    display: grid;
+    grid-template-areas: 'title imagen'
+                         'texto imagen';
+    margin-bottom: 4.5rem;
+}
+.card-title-hlp {
+    grid-area: title;
+    font-weight: 800;
+}
+.card-text-hlp {
+    grid-area: texto;
+    font-size: 1.3rem;
+    padding-right: 2rem;
+    font-weight: 300;
+}
+.card-img-hlp {
+    grid-area: imagen;
+    max-width: 400px;
+}
+.reempresa-otros-servicios{
+    display: grid;
+    max-width: 1110px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    gap: .4rem;
+}
+.card-head img{
+    width: 100%;
+    max-width: 351px;
+    height: auto;
+}
+.card-body p {
+    padding-right: 1rem;
+}
+.card a:hover {
+    opacity: .8;
+    color:#a3d4db!important;
+    text-decoration: none!important;
+  }
+.vull-reemprendre a:hover {
+    opacity: .8;
+    color:#dfd0a7!important;
+    text-decoration: none!important;
+  } 
+h2{
+    text-align: center;
+    margin: 6rem 0;
+}
+h3{
+    padding-left: 0!important;
+    margin-top: 0!important;
+}
+p {
+    font-weight: 300;
+}
+.reempresa-ayuda-idi a:hover {
+    color: #dfd0a7!important;
+}
+.reempresa-otros-servicios h3 {
+    margin-top: 2rem!important;
+}
+@media only screen and (max-width: 795px) {
+    .reempresa-pictos {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .reempresa-ayuda-idi {
+        grid-template-areas: 'imagen' 'title' 'texto';
+        margin-left: 2rem;
+    }
+    .reempresa-otros-servicios {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .reempresa-otros-servicios img {
+        width: 100%;
+        max-width: 351px;
+        height: auto;
+    }
+    .card-head {
+        text-align: center;
+        max-width: 925px; /* se lo tengo que poner porque las imágenes que usan son de distintos tamaños */
+    }
+    h4{
+        text-align: center;
+    }
+    .card-body {
+      max-height: auto;
+      min-height: auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }  

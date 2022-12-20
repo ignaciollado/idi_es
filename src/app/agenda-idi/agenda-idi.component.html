@@ -1,0 +1,9 @@
+<h3><a [routerLink]="['/formacion-agenda']">Agenda</a></h3>
+<div class="iframe-agenda" *ngIf="currentLang ==='ca'">
+    <iframe src='https://utils.idi.es/index.php/agenda_ctrl/muestraEnIframe/ca/home' height="370px" frameborder="0" loading="lazy" scrolling="no"></iframe>
+</div>
+<div *ngIf="currentLang ==='es'">
+    <iframe src='https://utils.idi.es/index.php/agenda_ctrl/muestraEnIframe/es/home' height="370px" frameborder="0" loading="lazy" scrolling="no"></iframe>
+</div>
+
+

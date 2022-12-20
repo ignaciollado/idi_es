@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;600;800&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 1390px; /* este ancho viene fijado por el ancho de las imágenes del slider de la home */
+  margin: auto;
+  font-size: 10px!important;
+}
+
+body {
+  font-family: "Nunito sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"!important;
+  color: rgb(51, 51, 51);
+  box-sizing: border-box;
+  margin: 1%;
+  line-height: 1.8rem!important;
+}
+::selection {
+  color: #fff;
+  background: #4a7586;
+  border: #000 1px solid;
+}
+
+p {
+  margin-bottom: 4rem;
+}
+
+h3{
+ font-weight: 800;
+}
+
+h4{
+ font-size: 1.2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-link img {
+  width: 74px;
+}
+
+a{
+  color: rgba(0, 0, 0, 1)!important;
+}
+
+a:visited {
+  color: #3a9f9d;
+}
+
+a:hover {
+  opacity: .8;
+  color:#a2d3da!important;
+  text-decoration: none;
+}
+
+a:link:active, a:visited:active { 
+  color: #ff0000;
+}
+
+iframe{
+    min-height: 5rem;
+    width: 100%;
+}
+
+input:focus, textarea:focus{
+  background-color:rgb(236, 236, 234);
+  color:black;
+}
+
+p a{
+  text-decoration:  underline solid #34a39e 10%!important;
+  text-underline-offset: 10px;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  font-size: 1.4rem;
+}
+
+.col-5, .col-6, .col-7 {
+  width: 100%;
+}
+
+.card {
+  border: none;
+}
+
+@media only screen and (max-width: 795px) {
+  html{
+    padding: .5rem;
+    width: 99%;
+    background-color: rgb(255, 255, 255);
+  }
+
+}

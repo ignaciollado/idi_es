@@ -1,0 +1,47 @@
+<img class="cabecera" src="{{cabecera}}" alt="Cabecera IDI" title="Cabecera IDI" >
+
+<div  *ngIf="articleDetail">
+
+  <div class="card" *ngIf="articleDetail.data.attributes.images.image_fulltext; else simpleShow">
+      <div class="card-head" >
+        <img src={{articleDetail.data.attributes.images.image_fulltext}} alt={{articleDetail.data.attributes.title}} title={{articleDetail.data.attributes.title}}>
+      </div>
+
+      <div class="card-body">
+        <h3 class="card-title">{{articleDetail.data.attributes.title}}</h3>
+      </div>
+
+      <div class="card-footer">
+        <div class="detail-text" [innerHTML]="articleDetail.data.attributes.text.replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','/idi-detail/').replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/show-article-detail-content/')"></div>
+      </div>
+  </div>
+
+  <ng-template #simpleShow>
+      <div class="detail-text" [innerHTML]="articleDetail.data.attributes.text.replaceAll('images/','https://contents.idi.es/images/').replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/').replaceAll('https://idi.es/index.php/agenda_ctrl/reposit','#/formacion-webinars').replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/show-article-detail-content/')"></div>
+  </ng-template>
+
+</div>
+
+<ng-template *ngIf=" stringMessage === 'One moment, opening iframe ayudas subvenciones ...'">
+  <div *ngIf="currentLang ==='ca-ES'">
+    <iframe width="100%" height="1024px" src="https://utils.idi.es/index.php/ayud_subv/muestraEnIframe/ca" frameborder="0" laoding="lazy" scrolling="yes"></iframe>
+  </div>
+  <div *ngIf="currentLang ==='es-ES'">
+    <iframe width="100%" height="1024px" src="https://utils.idi.es/index.php/ayud_subv/muestraEnIframe/es" frameborder="0" laoding="lazy" scrolling="yes"></iframe>
+  </div> 
+</ng-template>
+
+{{stringMessage}}
+<ng-template *ngIf="stringMessage==='One moment, opening iframe agenda IDI ...'">
+  {{currentLang}}
+  <div *ngIf="currentLang==='ca-ES'">
+    <iframe style="min-height:250px; width: 100%;" src='https://utils.idi.es/index.php/agenda_ctrl/muestraEnIframe/ca/home' frameborder="0" laoding="lazy" scrolling="no"></iframe>
+  </div>
+  <div *ngIf="currentLang==='es-ES'">
+    <iframe style="min-height:250px; width: 100%;" src='https://utils.idi.es/index.php/agenda_ctrl/muestraEnIframe/es/home' frameborder="0" laoding="lazy" scrolling="no"></iframe>
+  </div>
+</ng-template>
+
+
+<div *ngIf="!articleDetail"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
+

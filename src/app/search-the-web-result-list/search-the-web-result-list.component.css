@@ -1,0 +1,40 @@
+.search-result-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 1.5rem;
+    gap: .9rem;
+  }
+
+.card {
+  margin-bottom: 2rem;
+}
+
+img{
+  max-width: 262px; /* se lo tengo que poner porque las imágenes que usan son de 268px */
+  }
+
+a:hover {
+    text-decoration:none solid rgb(223, 52, 52) 20%!important;
+  }
+
+.card-title {
+  min-height: 6.5rem;
+}
+
+@media only screen and (max-width: 795px) {
+  .search-result-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-head {
+    max-width: 925px; /* se lo tengo que poner porque las imágenes que usan son de distintos tamaños */
+  }
+  .card-body {
+    max-height: auto;
+    min-height: auto;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}  
+

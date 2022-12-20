@@ -1,0 +1,47 @@
+.cabecera{
+  width: 100%;
+  max-width: 1110px;
+  height: auto;
+}
+h1{
+  font-weight: 600;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+h2{
+  text-align: center;
+  font-weight: 600;
+}
+.service-idi-text{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "texto imagen";
+  row-gap: 1rem;
+  text-align: left;
+}
+.services-ayuda-idi{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  gap: .4rem;
+  text-align: center;
+}
+.card-head img {
+  max-width: 174px;
+  height: auto;
+}
+.row .col-7 {
+  padding-left: 2rem;
+  line-height: 2.6rem;
+  font-size: 1.8rem;
+}
+@media only screen and (max-width: 795px) {
+    .services-ayuda-idi {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .card-body {
+      max-height: auto;
+      min-height: auto;
+    }
+  }  

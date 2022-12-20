@@ -1,0 +1,152 @@
+<div class="featured-idi-container" *ngIf="featuretsIDI">
+<!--   <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+
+        <ol class="carousel-indicators">
+          <li *ngIf="featuretsIDI.length>=1" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li *ngIf="featuretsIDI.length>=2" data-target="#myCarousel" data-slide-to="1"></li>
+          <li *ngIf="featuretsIDI.length>=3" data-target="#myCarousel" data-slide-to="2"></li>
+          <li *ngIf="featuretsIDI.length>=4" data-target="#myCarousel" data-slide-to="3"></li>
+          <li *ngIf="featuretsIDI.length>=5" data-target="#myCarousel" data-slide-to="4"></li>
+          <li *ngIf="featuretsIDI.length>=6" data-target="#myCarousel" data-slide-to="5"></li>
+        </ol> 
+    
+        <div class="carousel-inner">
+          <div *ngIf="featuretsIDI.length>=1" class="item active"><a routerLink="/idi-featured-detail/{{featuretsIDI[0].attributes.id}}" class="btn btn-primary">
+            <img src={{featuretsIDI[0].attributes.images.image_intro}} alt={{featuretsIDI[0].attributes.title}} title={{featuretsIDI[0].attributes.title}} style="width:100%;">
+            </a>
+          </div>
+    
+          <div *ngIf="featuretsIDI.length>=2" class="item"><a routerLink="/idi-featured-detail/{{featuretsIDI[1].attributes.id}}" class="btn btn-primary">
+            <img src={{featuretsIDI[1].attributes.images.image_intro}} alt={{featuretsIDI[1].attributes.title}} title={{featuretsIDI[1].attributes.title}} style="width:100%;">
+            </a>
+          </div>
+        
+          <div *ngIf="featuretsIDI.length>=3" class="item"><a routerLink="/idi-featured-detail/{{featuretsIDI[2].attributes.id}}" class="btn btn-primary">
+            <img src={{featuretsIDI[2].attributes.images.image_intro}} alt={{featuretsIDI[2].attributes.title}} title={{featuretsIDI[2].attributes.title}} style="width:100%;">
+            </a>
+          </div>
+
+          <div *ngIf="featuretsIDI.length>=4" class="item"><a routerLink="/idi-featured-detail/{{featuretsIDI[3].attributes.id}}" class="btn btn-primary">
+            <img src={{featuretsIDI[3].attributes.images.image_intro}} alt={{featuretsIDI[3].attributes.title}} title={{featuretsIDI[3].attributes.title}} style="width:100%;">
+            </a>
+          </div>
+
+          <div *ngIf="featuretsIDI.length>=5" class="item"><a routerLink="/idi-featured-detail/{{featuretsIDI[4].attributes.id}}" class="btn btn-primary">
+            <img src={{featuretsIDI[4].attributes.images.image_intro}} alt={{featuretsIDI[4].attributes.title}} title={{featuretsIDI[4].attributes.title}} style="width:100%;">
+            </a>
+          </div>
+
+          <div *ngIf="featuretsIDI.length>=6" class="item"><a routerLink="/idi-featured-detail/{{featuretsIDI[5].attributes.id}}" class="btn btn-primary">
+            <img src={{featuretsIDI[5].attributes.images.image_intro}} alt={{featuretsIDI[5].attributes.title}} title={{featuretsIDI[5].attributes.title}} style="width:100%;">
+            </a>
+          </div>
+        </div> 
+    
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div> -->
+
+  <div id="carouselIDIFeatured" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button *ngIf="featuretsIDI.length>=1" type="button" data-bs-target="#carouselIDIFeatured" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button *ngIf="featuretsIDI.length>=2" type="button" data-bs-target="#carouselIDIFeatured" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button *ngIf="featuretsIDI.length>=3" type="button" data-bs-target="#carouselIDIFeatured" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button *ngIf="featuretsIDI.length>=4" type="button" data-bs-target="#carouselIDIFeatured" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button *ngIf="featuretsIDI.length>=5" type="button" data-bs-target="#carouselIDIFeatured" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button *ngIf="featuretsIDI.length>=6" type="button" data-bs-target="#carouselIDIFeatured" data-bs-slide-to="5" aria-label="Slide 6"></button>
+
+    </div>
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" data-bs-interval="10000" *ngIf="featuretsIDI.length>=1">
+        <a routerLink="/idi-featured-detail/{{featuretsIDI[0].attributes.id}}">
+          <img src={{featuretsIDI[0].attributes.images.image_intro}} alt={{featuretsIDI[0].attributes.title}} title={{featuretsIDI[0].attributes.title}} class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+           <!--  <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p> -->
+          </div>
+        </a>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="4000" *ngIf="featuretsIDI.length>=2">
+        <a routerLink="/idi-featured-detail/{{featuretsIDI[1].attributes.id}}">
+          <img src={{featuretsIDI[1].attributes.images.image_intro}} alt={{featuretsIDI[1].attributes.title}} title={{featuretsIDI[1].attributes.title}} class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+         <!--    <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p> -->
+          </div>
+        </a>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="4000" *ngIf="featuretsIDI.length>=3">
+        <a routerLink="/idi-featured-detail/{{featuretsIDI[2].attributes.id}}">
+        <img src={{featuretsIDI[2].attributes.images.image_intro}} alt={{featuretsIDI[2].attributes.title}} title={{featuretsIDI[2].attributes.title}} class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p> -->
+        </div>
+        </a>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="4000" *ngIf="featuretsIDI.length>=4">
+        <a routerLink="/idi-featured-detail/{{featuretsIDI[3].attributes.id}}">
+          <img src={{featuretsIDI[3].attributes.images.image_intro}} alt={{featuretsIDI[3].attributes.title}} title={{featuretsIDI[3].attributes.title}} class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+           <!--  <h5>Fourth slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p> -->
+          </div>
+        </a>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="4000" *ngIf="featuretsIDI.length>=5">
+        <a routerLink="/idi-featured-detail/{{featuretsIDI[4].attributes.id}}">
+          <img src={{featuretsIDI[4].attributes.images.image_intro}} alt={{featuretsIDI[4].attributes.title}} title={{featuretsIDI[4].attributes.title}} class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <h5>Fith slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p> -->
+          </div>
+        </a>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="4000" *ngIf="featuretsIDI.length>=6">
+        <a routerLink="/idi-featured-detail/{{featuretsIDI[5].attributes.id}}">
+          <img src={{featuretsIDI[5].attributes.images.image_intro}} alt={{featuretsIDI[5].attributes.title}} title={{featuretsIDI[5].attributes.title}} class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+           <!--  <h5>Sixth slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p> -->
+          </div>
+        </a>
+      </div>
+    
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIDIFeatured" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselIDIFeatured" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
+
+
+<div *ngIf="!featuretsIDI">
+    <i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingFeaturedIDI' | translate}} 
+    <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
+      <img src="https://via.placeholder.com/1088x480.png?text=...loading Institut d'Innovació featured" class="card-img-top" alt="loading image">
+      <div class="card-body">
+        <h5 class="card-title placeholder-glow">
+          <span class="placeholder col-6"></span>
+        </h5>    
+      </div> 
+    </div>
+</div>
+

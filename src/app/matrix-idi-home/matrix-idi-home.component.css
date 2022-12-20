@@ -1,0 +1,17 @@
+.category-container {
+  display: grid;
+  grid-template-areas: "theTitle" "theArticles";
+  margin-bottom: 1.5rem;
+  gap: .9rem;
+}
+
+.main-category-title {
+  grid-area: theTitle;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.category-articles {
+  grid-area: theArticles;
+  /* border: 1px solid green; */
+}

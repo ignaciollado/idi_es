@@ -1,0 +1,111 @@
+<h3 *ngIf="categoriesSRV">{{'descubreServiciosIDI' | translate}}</h3>
+<div class="services-idi-container" *ngIf="idiServices">
+    <div *ngFor="let idiService of idiServices">
+      
+      <div class="card">
+        <a routerLink="/idi-service-detail/{{idiService.id}}/{{idiService.relationships.category.data.id}}">
+          <div class="card-head">
+            <h4>{{idiService.attributes.title}}</h4>
+          </div>
+          <div class="card-body">
+              <p class="card-title" [innerHTML]="idiService.attributes.text"></p>
+          </div>
+        </a>
+      </div>
+    
+    </div>
+  
+</div>
+<div *ngIf="!idiServices" class="idi-services">
+  <!--   <i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingServices' | translate}} -->
+
+  <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+    </div>
+  </div> 
+
+  <div class="card" aria-hidden="true" id="noticiaDosPlaceHolder">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="card" aria-hidden="true" id="noticiaTresPlaceHolder">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+    </div>
+  </div> 
+
+  <div class="card" aria-hidden="true" id="noticiaCuatroPlaceHolder">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="card" aria-hidden="true" id="noticiaCincoPlaceHolder">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+    </div>
+  </div> 
+
+  <div class="card" aria-hidden="true" id="noticiaSeisPlaceHolder">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-4"></span>
+        <span class="placeholder col-6"></span>
+        <span class="placeholder col-8"></span>
+      </p>
+    </div>
+  </div>
+</div>

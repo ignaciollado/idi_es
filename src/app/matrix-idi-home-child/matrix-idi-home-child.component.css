@@ -1,0 +1,10 @@
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  /* border: 1px solid orange; */
+  column-gap: 1rem;
+}
+
+.card-body {
+  padding: 0;
+}
