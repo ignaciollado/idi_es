@@ -13,5 +13,9 @@
 
 .category-articles {
   grid-area: theArticles;
-  /* border: 1px solid green; */
+}
+
+h2 {
+  margin-top: 4rem!important;
+  font-size: 3rem!important;
 }
