@@ -7,11 +7,17 @@ import { Pipe, PipeTransform } from '@angular/core'
 export class CategoryTitlePipe implements PipeTransform {
 
 
-  transform(currentCategory: string, ...args: unknown[]): string {
+  transform(currentCategory: string, args: string): string {
 
-    let splitted = currentCategory.split("#"); 
+    let splitted = currentCategory.split("#");
 
-    return splitted[1];
+    if (args === 'es-ES') {
+      return splitted[2];
+    } else {
+      return splitted[1];
+    }
+
+    
 
   }
 

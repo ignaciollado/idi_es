@@ -11,7 +11,7 @@ export class CategoryIdPipe implements PipeTransform {
   
   transform( currentCategory: string, ...args: unknown[] ): any {
 
-    let splitted = currentCategory.split("#"); 
+    let splitted = currentCategory.split("#");
 
     return splitted[0];
   

@@ -1,7 +1,7 @@
 
   <div class="category-container" *ngFor="let childCategory of childCatMatrixHomeIDI">
 
-    <h2 id="{{'#'}}{{childCategory | categoryID}}" class="main-category-title">{{childCategory | categoryTitle}}</h2>
+    <h2 id="{{childCategory | categoryID}}" class="main-category-title">{{childCategory | categoryTitle:currentLang}}</h2>
     <app-matrix-idi-home-child childCategory="{{childCategory  | categoryID}}" class="category-articles"></app-matrix-idi-home-child>
 
   </div>

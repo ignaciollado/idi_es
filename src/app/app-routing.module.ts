@@ -9,7 +9,7 @@ import { FeaturedIdiDetailComponent } from './featured-idi-detail/featured-idi-d
 import { ServiceIdiDetailComponent } from './service-idi-detail/service-idi-detail.component';
 import { AyudasSubvencionesIdiDetailComponent } from './ayudas-subvenciones-idi-detail/ayudas-subvenciones-idi-detail.component';
 import { FormacionAgendaIdiComponent } from './formacion-agenda-idi/formacion-agenda-idi.component';
-import { FormacionWebinarsIdiComponent } from './formacion-webinars-idi/formacion-webinars-idi.component';
+/* import { FormacionWebinarsIdiComponent } from './formacion-webinars-idi/formacion-webinars-idi.component'; */
 import { MenuHomeIdiComponent } from "./menu-home-idi/menu-home-idi-component";
 import { TransparenciaIdiComponent } from './transparencia-idi/transparencia-idi.component';
 
@@ -32,11 +32,10 @@ const routes: Routes = [
     { path: '', title: "Institut d'Innovació Empresarial de les Illes Balears", component: HomeComponentComponent },
   /*   { path: 'home', title: "Institut d'Innovació Empresarial de les Illes Balears", component: HomeComponentComponent }, */
 
-
     { path: 'idi-featured-detail/:id', title: 'Destacats IDI', component: FeaturedIdiDetailComponent },
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
     { path: 'idi-detail/:id', component: NoticiaDetailComponent },
-    { path: 'idi-level-one/:id', component:LevelOneComponent},
+    { path: 'idi-level-one/:id/:idCat', component:LevelOneComponent},
     { path: 'feder-detail/:id', component: FederDetailComponent },
 
     { path: 'idi-transparency-detail/:id', component: TransparencyDetailComponent },
@@ -83,7 +82,8 @@ const routes: Routes = [
     { path: 'idi-result-list/:searchTerm', component: SearchTheWebResultListComponent},
 
     { path: 'agenda-events', component: FormacionAgendaIdiComponent },
-    { path: 'formacion-webinars', component: FormacionWebinarsIdiComponent },
+
+    /* { path: 'formacion-webinars', component: FormacionWebinarsIdiComponent }, */
 
     { path: 'transparencia/:id', component: TransparenciaIdiComponent },
 
@@ -100,7 +100,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule]
 })
 

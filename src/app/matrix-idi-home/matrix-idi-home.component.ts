@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { Article, attrArticle, reqArticle } from '../model/article.model';
+/* import { Article, attrArticle, reqArticle } from '../model/article.model'; */
 import { ArticleService } from '../services/article.service';
 import { CategoryService } from '../services/category.service';
 import { MessageService } from '../services/message.service';
@@ -62,7 +62,7 @@ export class MatrixIdiHomeComponent implements OnInit {
 
             if ( item.attributes.parent_id.toString() === `${parentCategory}` ) {
 
-              this.childCatMatrixHomeIDI.push(`${item.attributes.id.toString()}#${item.attributes.title}`)
+              this.childCatMatrixHomeIDI.push(`${item.attributes.id.toString()}#${item.attributes.title}#${item.attributes.note}`) /* Si es cat el nombre esta en 'title', si es esp el nombre está en 'note' */
 
             }
          

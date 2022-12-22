@@ -2,13 +2,13 @@
 <div class='article-container' *ngIf="articulos">
 <div *ngFor="let articulo of articulos">
     
-    <a [routerLink]="['/idi-level-one', articulo.id]">
+    <a [routerLink]="['/idi-level-one', articulo.id, childCategory]">
       <div class="card">
         <div>
           <img class="card-head" src={{articulo.attributes.images.image_intro}} alt={{articulo.attributes.title}} title={{articulo.attributes.title}} />
         </div>
         <div class="card-body">
-          <h4 class="card-title">{{articulo.attributes.title | uppercase}}</h4>
+          <h4 class="card-title">{{articulo.attributes.title}}</h4>
         </div>
       </div>
     </a>
