@@ -46,7 +46,6 @@ export class MatrixIdiHomeChildComponent implements OnInit {
         this.currentLang = 'ca-ES'
     }
 
- 
     this.getChildChildCategories( this.childCategory ) /* The child categories from child 'idi-web-root' */
 
     this.getArticulos( this.currentLang, this.childChildCatMatrixHomeIDI )

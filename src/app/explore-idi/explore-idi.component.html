@@ -1,6 +1,11 @@
-<h2>{{'ExploraIDI' | translate}}</h2>
 
-<div class="explore-idi-container" *ngIf="exploraIDI"> 
+<h2 *ngIf="exploraIDI.length > 0">{{'ExploraIDI' | translate}}</h2>
+
+<div [ngClass]="{'explore-idi-container': exploraIDI.length > 0}" *ngIf="exploraIDI">
+
+  <div class="alert alert-info" role="alert"  *ngIf="!exploraIDI.length > 0">
+   <h3>Disculpau, de moment, no s'han creat grups de públic objectiu.</h3>
+  </div>
   
   <div *ngFor="let noticia of exploraIDI">
     <a href="#{{noticia.relationships.category.data.id}}">

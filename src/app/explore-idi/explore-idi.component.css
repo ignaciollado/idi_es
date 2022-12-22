@@ -5,6 +5,11 @@
   gap: 1rem;
 }
 
+.alert {
+  min-width: 100%;
+  border: 1px solid black
+}
+
 .card {
   display: grid;
   grid-template-areas:  'image' 
