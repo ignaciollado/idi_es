@@ -19,3 +19,17 @@ h2 {
   margin-top: 4rem!important;
   font-size: 3rem!important;
 }
+
+@media only screen and (max-width: 795px) {
+  h2 {
+  
+    font-size: 1.5rem !important;
+    font-weight: bolder !important;
+    background: black;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+  }
+}
