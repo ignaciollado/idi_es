@@ -1,6 +1,11 @@
+<div>
+  <img class="card__head" src="https://contents.idi.es/{{rootCategoryDetails.data.attributes.params.image}}" alt="{{rootCategoryDetails.data.attributes.title}}" title="{{rootCategoryDetails.data.attributes.title}}" />
+</div>
+
 <div class="category-container" *ngFor="let childCategory of childCatMatrixHomeIDI">
 
-  <h2 id="{{childCategory | categoryID}}" class="main-category-title">--{{childCategory | categoryTitle:currentLang}}--</h2>
+  <h2 id="{{childCategory | categoryID}}" class="main-category-title"><strong>{{childCategory | categoryTitle:currentLang}}</strong></h2>
   <app-who-we-are-idi-child childCategory="{{childCategory  | categoryID}}" class="category-articles"></app-who-we-are-idi-child>
 
 </div>
+<h2><strong><app-proyectos-idi></app-proyectos-idi></strong></h2>

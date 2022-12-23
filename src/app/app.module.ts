@@ -53,6 +53,8 @@ import { MatrixIdiHomeChildComponent } from './matrix-idi-home-child/matrix-idi-
 import { LevelOneComponent } from './level-one/level-one.component';
 import { WhoWeAreIdiComponent } from './who-we-are-idi/who-we-are-idi.component';
 import { WhoWeAreIdiChildComponent } from './who-we-are-idi-child/who-we-are-idi-child.component';
+import { ProyectosIdiComponent } from './proyectos-idi/proyectos-idi.component';
+import { WellFormattedLinkPipe } from './utils/well-formatted-link.pipe';
 
 @NgModule({
   declarations: [
@@ -96,7 +98,9 @@ import { WhoWeAreIdiChildComponent } from './who-we-are-idi-child/who-we-are-idi
     MatrixIdiHomeChildComponent,
     LevelOneComponent,
     WhoWeAreIdiComponent,
-    WhoWeAreIdiChildComponent
+    WhoWeAreIdiChildComponent,
+    ProyectosIdiComponent,
+    WellFormattedLinkPipe
   ],
   imports: [
     BrowserModule,

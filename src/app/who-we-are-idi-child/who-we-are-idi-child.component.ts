@@ -82,7 +82,6 @@ export class WhoWeAreIdiChildComponent implements OnInit {
           this.articulos = this.articulos.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) /* Todos los artículos en el idioma de la web */
           this.articulos = this.articulos.filter( (item : reqArticle) => childChildCategories.includes( item.relationships.category.data.id ) ) /* Todos los artículos cuya categoría está en el array */
           this.articulos = this.articulos.sort((a,b) => {return +a.attributes.title - +b.attributes.title} ) /* Todos los artículos ordenados*/
-        console.log (`artículos: ${this.articulos}`)
         } ) 
 
   }
