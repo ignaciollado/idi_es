@@ -1,6 +1,6 @@
 
 <div class='article-container' *ngIf="articulos">
-<div *ngFor="let articulo of articulos">
+  <div *ngFor="let articulo of articulos">
     
     <a [routerLink]="['/idi-level-one', articulo.id, childCategory]">
       <div class="card">
@@ -13,7 +13,7 @@
       </div>
     </a>
   
-</div>
+  </div>
 </div>
 
 <div *ngIf="!articulos" class="article-container">

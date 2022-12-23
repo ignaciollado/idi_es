@@ -9,16 +9,16 @@ import { Router, ActivatedRoute,  } from '@angular/router';
 import { Category, reqCategory } from '../model/category.model';
 
 @Component({
-  selector: 'app-matrix-idi-home-child',
-  templateUrl: './matrix-idi-home-child.component.html',
-  styleUrls: ['./matrix-idi-home-child.component.css']
+  selector: 'app-who-we-are-idi-child',
+  templateUrl: './who-we-are-idi-child.component.html',
+  styleUrls: ['./who-we-are-idi-child.component.css']
 })
-export class MatrixIdiHomeChildComponent implements OnInit {
+export class WhoWeAreIdiChildComponent implements OnInit {
 
-  @Input() childCategory:string; // decorate the property with @Input() with the idi-web-root child categories
+  @Input() childCategory:string; // decorate the property with @Input() with the 'idi-qui-som' child categories
 
   public childChildCategory: reqCategory[]
-  public childChildCatMatrixHomeIDI: string[] = [] /* ID de Categorías nietas de 'idi-web-root' */
+  public childChildCatMatrixHomeIDI: string[] = [] /* ID de Categorías nietas de ''idi-qui-som' */
 
   public articulos: reqArticle[] /* Contenidos  */
   public categorias: reqCategory[]
@@ -31,7 +31,6 @@ export class MatrixIdiHomeChildComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.messageService.add("Cargando child matrix idi home...")
     switch (this.translateService.currentLang) {
       case 'ca':
         this.currentLang = 'ca-ES'
@@ -45,13 +44,14 @@ export class MatrixIdiHomeChildComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
+    
+    //this.getChildChildCategories( this.childCategory ) /* The child categories from child ''idi-qui-som' */
 
-    this.getChildChildCategories( this.childCategory ) /* The child categories from child 'idi-web-root' */
+    this.getArticulos( this.currentLang, this.childCategory )
 
-    this.getArticulos( this.currentLang, this.childChildCatMatrixHomeIDI )
   }
 
-  getChildChildCategories( parentCategory: string ) {
+  getChildChildCategories ( parentCategory: string ) {
 
     this.categoryService.getCategories() 
       .subscribe( ( item:Category ) => {
@@ -60,7 +60,7 @@ export class MatrixIdiHomeChildComponent implements OnInit {
         this.childChildCategory = this.childChildCategory.filter( ( item : reqCategory ) => item.attributes.published === 1 )
 
         this.childChildCategory.map ( item => {
-
+          console.log ( `Parent: ${item.attributes.parent_id.toString()}`, `Parent: ${parentCategory}` )
           if ( item.attributes.parent_id.toString() === `${parentCategory}`) {
 
             this.childChildCatMatrixHomeIDI.push(item.attributes.id.toString())
@@ -73,7 +73,7 @@ export class MatrixIdiHomeChildComponent implements OnInit {
 
   }
 
-  getArticulos( currentLanguage:string, childChildCategories: string[] /*  ids de categorías child child */ ) {
+  getArticulos( currentLanguage:string, childChildCategories: string /* ids de categorías child child */ ) {
 
     this.articleService.getArticles() /* Para cada categoría nieta, buscar todos los artículos asociados */
         .subscribe( (resp:Article) => {
@@ -82,6 +82,7 @@ export class MatrixIdiHomeChildComponent implements OnInit {
           this.articulos = this.articulos.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) /* Todos los artículos en el idioma de la web */
           this.articulos = this.articulos.filter( (item : reqArticle) => childChildCategories.includes( item.relationships.category.data.id ) ) /* Todos los artículos cuya categoría está en el array */
           this.articulos = this.articulos.sort((a,b) => {return +a.attributes.title - +b.attributes.title} ) /* Todos los artículos ordenados*/
+        console.log (`artículos: ${this.articulos}`)
         } ) 
 
   }

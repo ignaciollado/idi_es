@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { WhoWeAreIdiComponent } from './who-we-are-idi/who-we-are-idi.component';
 import { NoticiaDetailComponent } from './noticia-detail/noticia-detail.component';
 import { FederDetailComponent } from './feder-detail/feder-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-import { FeaturedIdiDetailComponent } from './featured-idi-detail/featured-idi-detail.component';
+/* import { FeaturedIdiDetailComponent } from './featured-idi-detail/featured-idi-detail.component'; */
 import { ServiceIdiDetailComponent } from './service-idi-detail/service-idi-detail.component';
 import { AyudasSubvencionesIdiDetailComponent } from './ayudas-subvenciones-idi-detail/ayudas-subvenciones-idi-detail.component';
 import { FormacionAgendaIdiComponent } from './formacion-agenda-idi/formacion-agenda-idi.component';
@@ -32,7 +33,8 @@ const routes: Routes = [
     { path: '', title: "Institut d'Innovació Empresarial de les Illes Balears", component: HomeComponentComponent },
   /*   { path: 'home', title: "Institut d'Innovació Empresarial de les Illes Balears", component: HomeComponentComponent }, */
 
-    { path: 'idi-featured-detail/:id', title: 'Destacats IDI', component: FeaturedIdiDetailComponent },
+    { path: 'idi-who-we-are/:id', title: 'Qui som', component: WhoWeAreIdiComponent },
+   /*  { path: 'idi-featured-detail/:id', title: 'Destacats IDI', component: FeaturedIdiDetailComponent }, */
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
     { path: 'idi-detail/:id', component: NoticiaDetailComponent },
     { path: 'idi-level-one/:id/:idCat', component:LevelOneComponent},

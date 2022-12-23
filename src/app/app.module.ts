@@ -51,6 +51,8 @@ import { MatrixIdiHomeComponent } from './matrix-idi-home/matrix-idi-home.compon
 import { CategoryTitlePipe } from './utils/category-title.pipe';
 import { MatrixIdiHomeChildComponent } from './matrix-idi-home-child/matrix-idi-home-child.component';
 import { LevelOneComponent } from './level-one/level-one.component';
+import { WhoWeAreIdiComponent } from './who-we-are-idi/who-we-are-idi.component';
+import { WhoWeAreIdiChildComponent } from './who-we-are-idi-child/who-we-are-idi-child.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +94,9 @@ import { LevelOneComponent } from './level-one/level-one.component';
     MatrixIdiHomeComponent,
     CategoryTitlePipe,
     MatrixIdiHomeChildComponent,
-    LevelOneComponent
+    LevelOneComponent,
+    WhoWeAreIdiComponent,
+    WhoWeAreIdiChildComponent
   ],
   imports: [
     BrowserModule,
