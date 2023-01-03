@@ -55,6 +55,7 @@ import { WhoWeAreIdiComponent } from './who-we-are-idi/who-we-are-idi.component'
 import { WhoWeAreIdiChildComponent } from './who-we-are-idi-child/who-we-are-idi-child.component';
 import { ProyectosIdiComponent } from './proyectos-idi/proyectos-idi.component';
 import { WellFormattedLinkPipe } from './utils/well-formatted-link.pipe';
+import { HistoryServicesIdiComponent } from './history-services-idi/history-services-idi.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { WellFormattedLinkPipe } from './utils/well-formatted-link.pipe';
     WhoWeAreIdiComponent,
     WhoWeAreIdiChildComponent,
     ProyectosIdiComponent,
-    WellFormattedLinkPipe
+    WellFormattedLinkPipe,
+    HistoryServicesIdiComponent
   ],
   imports: [
     BrowserModule,

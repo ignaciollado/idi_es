@@ -24,16 +24,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/idi-who-we-are/367">{{'Quienes_Somos' | translate}}</a>
+            <a class="nav-link" routerLink="/idi-who-we-are/367">{{'quienesSomos' | translate}}</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/what-we-offer">{{'Que_Ofrecemos' | translate}}</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{'queOfrecemos' | translate}}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['/']" >{{'queOfrecemosServiciosActivos' | translate}}</a></li>
+              <li><a class="dropdown-item" routerLink="/idi-history-services">{{'queOfrecemosHistorico' | translate}}</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/idi-list-news/9999">{{'noticiasTitle' | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/agenda-events">{{'Agenda_Title' | translate}}</a>
+            <a class="nav-link" routerLink="/agenda-events">{{'agendaTitle' | translate}}</a>
           </li>       
           <li class="nav-item">
             <a class="nav-link" routerLink="/ayudas-subvenciones">{{'Ayudas_Subv' | translate}}</a>

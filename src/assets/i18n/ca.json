@@ -9,9 +9,12 @@
     "Update": "Actualitzar",
     "Error": "Per favor, indiqui els detalls requerits.",
 
-    "Quienes_Somos": "Qui som",
-    "Que_Ofrecemos": "Què oferim",
-    "Agenda_Title": "Agenda",
+    "quienesSomos": "Qui som",
+    "queOfrecemos": "Que oferim",
+    "queOfrecemosServiciosActivos": "Serveis actius",
+    "queOfrecemosHistorico": "Històric",
+
+    "agendaTitle": "Agenda",
     "noHayPublicoObjetivo": "Disculpi les molèsties, de moment, no tenim projectes disponibles per a vostè!",
 
     "Emprendedor": "Emprenedor",
