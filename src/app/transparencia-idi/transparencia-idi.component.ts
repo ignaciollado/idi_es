@@ -16,7 +16,8 @@ export class TransparenciaIdiComponent implements OnInit {
   public contenidos: reqArticle[]
   cabecera: string;
   
-  constructor( public translateService: TranslateService, private articleService: ArticleService, private messageService: MessageService, private route: ActivatedRoute ) { }
+  constructor( public translateService: TranslateService, private articleService: ArticleService, 
+    private messageService: MessageService, private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
 
@@ -42,7 +43,7 @@ export class TransparenciaIdiComponent implements OnInit {
         break;
     }
 
-    this.articleService.getArticles()
+    this.articleService.getArticlesEveryThing()
     .subscribe( (resp:Article) => {
 
        this.contenidos = resp.data

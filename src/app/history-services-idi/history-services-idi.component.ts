@@ -114,17 +114,10 @@ export class HistoryServicesIdiComponent implements OnInit {
 
         })
 
-          /*         console.info ( this.tagsHistoryIDI, this.tagsHistoryIDI.forEach(element => element) )
-        const map = this.tagsHistoryIDI.reduce( (acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map() );
-         console.info(arr) */
-
-        /*         console.info([...map.keys()])
-        console.info([...map.values()])
-        console.info([...map.entries()])  */
   }
 
   getUnArticulo (id:string) {
-    
+    let arrayTemp:string[] = []
     this.articleService.getArticle(id)
       .subscribe( (resp: OneArticle) => {
         this.unArticuloAttribute = resp.data.attributes
@@ -132,6 +125,15 @@ export class HistoryServicesIdiComponent implements OnInit {
       
           this.tagsHistoryIDI.push( `${value}` )
           this.tagsHistoryIDI.sort()
+
+          this.tagsHistoryIDI.map( theTag => { /* Quito etiquetas duplicadas */
+                if (!arrayTemp.includes(theTag)) {
+                  const theTagFirstLetterCap = theTag.charAt(0).toUpperCase() + theTag.slice(1); /* y pongo la primera letra en capitals */
+                  arrayTemp.push(theTagFirstLetterCap)
+                }
+          })
+
+          this.tagsHistoryIDI = arrayTemp
         })
       })
       
