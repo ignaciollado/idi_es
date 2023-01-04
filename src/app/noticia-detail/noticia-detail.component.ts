@@ -26,7 +26,7 @@ export class NoticiaDetailComponent implements OnInit {
 
   }
 
-  getUnaNotica (id:string) {
+  getUnaNotica ( id:string ) {
 
     this.getNoticia.getArticle(id)
 

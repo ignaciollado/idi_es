@@ -22,8 +22,8 @@
  
    <small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
          <div class="noticia-tag">
-            <div *ngFor="let item of unaNoticiaAttribute.tags | keyvalue">
-                <a class="noticia-tag-item" routerLink="/idi-result-list/{{item.value}}">{{item.value}}</a>
+            <div *ngFor="let tag of unaNoticiaAttribute.tags | keyvalue">
+                <a class="noticia-tag-item" routerLink="/idi-result-list/{{tag.value}}">{{tag.value}}</a>
             </div>
         </div>
         <hr>

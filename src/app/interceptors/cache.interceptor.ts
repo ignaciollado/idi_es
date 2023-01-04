@@ -14,7 +14,7 @@ export class CacheInterceptor implements HttpInterceptor {
 
     this.timerService.startTimer();
     let remainingTimeInMilliseconds = this.timerService.getRemainingTime();
-    console.log ( "Cache resting time: ", remainingTimeInMilliseconds)
+    //console.log ( "Cache resting time: ", remainingTimeInMilliseconds)
     if (remainingTimeInMilliseconds <= 0) {
       
       this.timerService.resetTimer();
@@ -26,7 +26,7 @@ export class CacheInterceptor implements HttpInterceptor {
     } 
     
     //check if the outgoing calls are GET and MRDH APIs
-    console.log ( `Intercepting this...  ${req.url}` )
+    //console.log ( `Intercepting this...  ${req.url}` )
     if (req.method === 'GET' ) { 
       // attempt to retrieve a cached response
       const cachedResponse:
@@ -44,7 +44,7 @@ export class CacheInterceptor implements HttpInterceptor {
       return next.handle(req).pipe(
         tap((event) => {
           if (event instanceof HttpResponse) {
-            console.log(`FAIL!! ... adding item to cache: ${req.url}`);
+            //console.log(`FAIL!! ... adding item to cache: ${req.url}`);
             this.cacheService.put(req.url, event);
           }
         })

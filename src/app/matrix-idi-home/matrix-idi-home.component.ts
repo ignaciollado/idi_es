@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-/* import { Article, attrArticle, reqArticle } from '../model/article.model'; */
 import { ArticleService } from '../services/article.service';
 import { CategoryService } from '../services/category.service';
 import { MessageService } from '../services/message.service';

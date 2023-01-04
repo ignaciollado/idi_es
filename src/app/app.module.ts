@@ -57,6 +57,7 @@ import { ProyectosIdiComponent } from './proyectos-idi/proyectos-idi.component';
 import { WellFormattedLinkPipe } from './utils/well-formatted-link.pipe';
 import { HistoryServicesIdiComponent } from './history-services-idi/history-services-idi.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
