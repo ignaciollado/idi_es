@@ -14,12 +14,19 @@
   border: none;
   margin-bottom: 2rem;
   opacity: 0.9;
+  background-color:aliceblue;
   border: 1px solid aliceblue;
+  padding: 1rem;
 }
+
 
 .card:hover {
   opacity: 1.0;
   background-color:aliceblue;
+}
+
+a {
+  color: white!important;
 }
 
 .card-body {
@@ -28,4 +35,10 @@
   max-height: 12rem;
   line-height: 1.4285em;
   padding-left: 5px;
-} 
+  color: white;
+  font-weight: bold;
+}
+
+.card-body:hover {
+  color: black;
+}
