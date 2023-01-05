@@ -46,7 +46,7 @@ para acceder se usan los end-points de JOOMLA y luego, por codificación TypeScr
 
 Los contenidos los mantiene el departamento de COMUNICACIÓN
 
-## Taxonomía de los contenidos
+## Taxonomía de los contenidos de la web
 
 - Para estructurar los contenidos en función del público objetivo se ha creado la categoría raíz:
 
@@ -69,6 +69,12 @@ Cualquier contenido tipo `article`creado y asignado a una de estas categorías '
 Dentro de esta se han creado tres sub-categorías correspondientes a las tres áreas del apartado: IDI, La historia del IDI y Proyectos IDI.
 Además, la sub-categoría correspondiente a Proyectos IDI `Projectes IDI` contendrá otras sub-categorías correspondientes a cada uno de los servicios del IDI (_Foment del disseny_, _Informació sobre registre de marques_, _Digitalització_ ...) .
 
+
+- Para las noticias que genera el IDI:
+
+**Noticies**
+
+Cualquier artículo asignado a esta categoría y publicado aparecerá dentro de la opción de menú `Noticies`. La imagen que aparece en la portada es la que se corresponde con el campo `Intro Image`. La imagen que aparece en el detalle de la noticia es la que se corresponde con el campo `Full article Image`. Las etiquetas que se muestran en el pie del detalle de la noticia se corresponden con el campo `Tags`.
 
 ### Contenidos particulares de los apartados 'Ayudas y subvenciones' y 'Agenda'
 Para la gestión de los contenidos correspondientes al apartado **'Ayudas y subvenciones'** se usa un iframe que a punta a  
