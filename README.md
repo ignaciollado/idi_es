@@ -28,9 +28,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Pre-production site
 
-http:// test.idi.es
+http:// pre.idi.es
 or
-netlify ???
+¿¿¿ netlify ???
 
 ## Production site
 
@@ -38,13 +38,23 @@ https://www.idi.es
 
 ## Gestor de contenidos generales
 
-Para la gestión de los  contenidos en esta web se usa JOOMLA. El sitio en el que está alojado es:
+Para la gestión de los  contenidos en esta web se usa JOOMLA 4. El sitio en el que está alojado es:
 
 https://contents.idi.es
 
 para acceder se usan los end-points de JOOMLA y luego, por codificación TypeScript, se filtran los resultados deseados ( JOOMLA sólo tiene dos tipos de endponts: get all contents y get one content by ID ).
 
 Los contenidos los mantiene el departamento de COMUNICACIÓN
+
+## Taxonomía de los contenidos
+
+- Para estructurar los contenidos en función del público objetivo se ha creado la categoría raíz:
+**IDI-WEB-ROOT**
+
+- Para estructurar los contenidos del apartado Qui som se ha creado la categoría raíz:
+
+**IDI-QUI-SOM**
+
 
 ### Contenidos particulares de los apartados 'Ayudas y subvenciones' y 'Agenda'
 Para la gestión de los contenidos correspondientes al apartado **'Ayudas y subvenciones'** se usa un iframe que a punta a  
