@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Pre-production site
 
-![https:// pre.idi.es](https:// pre.idi.es)
+![https://pre.idi.es](https:// pre.idi.es)
 or
 ¿¿¿ netlify ???
 
