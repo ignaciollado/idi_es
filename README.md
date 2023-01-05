@@ -28,19 +28,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Pre-production site
 
-http:// pre.idi.es
+![https:// pre.idi.es](https:// pre.idi.es)
 or
 ¿¿¿ netlify ???
 
 ## Production site
 
-https://www.idi.es
+![https://www.idi.es](https://www.idi.es)
 
 ## Gestor de contenidos generales
 
 Para la gestión de los  contenidos en esta web se usa JOOMLA 4. El sitio en el que está alojado es:
 
-https://contents.idi.es
+![https://contents.idi.es](https://contents.idi.es)
 
 para acceder se usan los end-points de JOOMLA y luego, por codificación TypeScript, se filtran los resultados deseados ( JOOMLA sólo tiene dos tipos de endponts: get all contents y get one content by ID ).
 
