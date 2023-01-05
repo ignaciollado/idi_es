@@ -76,7 +76,7 @@ Además, la sub-categoría correspondiente a Proyectos IDI `Projectes IDI` conte
 
 Cualquier artículo asignado a esta categoría y publicado aparecerá dentro de la opción de menú `Noticies`. La imagen que aparece en la portada es la que se corresponde con el campo `Intro Image`. La imagen que aparece en el detalle de la noticia es la que se corresponde con el campo `Full article Image`. Las etiquetas que se muestran en el pie del detalle de la noticia se corresponden con el campo `Tags`.
 
-### Contenidos particulares de los apartados de menú 'Ayudas y subvenciones' y 'Agenda'
+## Contenidos particulares de los apartados de menú 'Ayudas y subvenciones' y 'Agenda'
 Para la gestión de los contenidos correspondientes al apartado **'Ayudas y subvenciones'** se usa un iframe que a punta a  
 
 https://utils.idi.es
