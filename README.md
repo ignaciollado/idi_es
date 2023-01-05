@@ -57,12 +57,16 @@ de esta categoría colgarán las distintas sub-categorías que se corresponderá
 3. Ets un ajuntament
 4. Ets un centre educatiu?
 
-La versión del título en català está en el campo `title`. La versión del título en español está en el campo `note`.
+La versión del título en català está en el campo `title`. La versión del título en español está en el campo `note`. Como sub-categorías de estas, es decir, como categorías 'nietas' de **idi-web-root** se crearán los servicios correspondientes. 
+Cualquier contenido tipo `article`creado a una de estas categorías 'nietas' aparecerá en el detalle.
 
 
 - Para estructurar los contenidos del apartado Qui som se ha creado la categoría raíz:
 
 **IDI-QUI-SOM**
+
+Dentro de esta se han creado tres sub-categorías correspondientes a las tres áreas del apartado: IDI, La historia del IDI y Proyectos IDI.
+La sub-categoría correspondiente a Proyectos IDI `Projectes IDI` contendrá, a su vez, otras sub-categorías correspondientes a cada uno de los servicios IDI.
 
 
 ### Contenidos particulares de los apartados 'Ayudas y subvenciones' y 'Agenda'
