@@ -58,10 +58,10 @@ de esta categoría colgarán las distintas sub-categorías que se corresponderá
 4. Ets un centre educatiu?
 
 La versión del título en català está en el campo `title`. La versión del título en español está en el campo `note`. Como sub-categorías de estas, es decir, como categorías 'nietas' de **idi-web-root** se crearán los servicios correspondientes. 
-Cualquier contenido tipo `article`creado a una de estas categorías 'nietas' aparecerá en el detalle.
+Cualquier contenido tipo `article`creado y asignado a una de estas categorías 'nietas' aparecerá en el detalle.
 
 
-- Para estructurar los contenidos del apartado Qui som se ha creado la categoría raíz:
+- Para estructurar los contenidos del apartado _Qui som_ se ha creado la categoría raíz:
 
 **IDI-QUI-SOM**
 
