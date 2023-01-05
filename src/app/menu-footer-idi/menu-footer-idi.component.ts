@@ -60,7 +60,7 @@ export class MenuFooterIdiComponent implements OnInit {
         break;        
     }
     
-    this.articleService.getArticles()
+    this.articleService.getArticlesEveryThing()
         .subscribe(
           (resp:Article) => {
            this.contenidos = resp.data
