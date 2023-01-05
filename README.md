@@ -49,6 +49,7 @@ Los contenidos los mantiene el departamento de COMUNICACIÓN
 ## Taxonomía de los contenidos
 
 - Para estructurar los contenidos en función del público objetivo se ha creado la categoría raíz:
+
 **IDI-WEB-ROOT**
 
 de esta categoría colgarán las distintas sub-categorías que se corresponderán con el público objetivo. Actualmente existen estas cuatro:
