@@ -28,19 +28,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Pre-production site
 
-![https://pre.idi.es](https://pre.idi.es)
+[https://pre.idi.es](https://pre.idi.es)
 or
 ¿¿¿ netlify ???
 
 ## Production site
 
-![https://www.idi.es](https://www.idi.es)
+[https://www.idi.es](https://www.idi.es)
 
 ## Gestor de contenidos generales
 
 Para la gestión de los  contenidos en esta web se usa JOOMLA 4. El sitio en el que está alojado es:
 
-![https://contents.idi.es](https://contents.idi.es)
+[https://contents.idi.es](https://contents.idi.es)
 
 para acceder se usan los end-points de JOOMLA y luego, por codificación TypeScript, se filtran los resultados deseados ( JOOMLA sólo tiene dos tipos de endponts: get all contents y get one content by ID ).
 
@@ -50,6 +50,15 @@ Los contenidos los mantiene el departamento de COMUNICACIÓN
 
 - Para estructurar los contenidos en función del público objetivo se ha creado la categoría raíz:
 **IDI-WEB-ROOT**
+
+de esta categoría colgarán las distintas sub-categorías que se corresponderán con el público objetivo. Actualmente existen estas cuatro:
+1. Ets una empresa?
+2. Ets una persona emprenedora?
+3. Ets un ajuntament
+4. Ets un centre educatiu?
+
+La versión del título en català está en el campo `title`. La versión del título en español está en el campo `note`.
+
 
 - Para estructurar los contenidos del apartado Qui som se ha creado la categoría raíz:
 
