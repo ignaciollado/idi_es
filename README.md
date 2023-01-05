@@ -67,7 +67,7 @@ Cualquier contenido tipo `article`creado y asignado a una de estas categorías '
 **IDI-QUI-SOM**
 
 Dentro de esta se han creado tres sub-categorías correspondientes a las tres áreas del apartado: IDI, La historia del IDI y Proyectos IDI.
-La sub-categoría correspondiente a Proyectos IDI `Projectes IDI` contendrá, a su vez, otras sub-categorías correspondientes a cada uno de los servicios IDI.
+Además, la sub-categoría correspondiente a Proyectos IDI `Projectes IDI` contendrá otras sub-categorías correspondientes a cada uno de los servicios del IDI (_Foment del disseny_, _Informació sobre registre de marques_, _Digitalització_ ...) .
 
 
 ### Contenidos particulares de los apartados 'Ayudas y subvenciones' y 'Agenda'
