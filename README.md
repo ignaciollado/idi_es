@@ -81,10 +81,11 @@ Para la gestión de los contenidos correspondientes al apartado **'Ayudas y subv
 
 https://utils.idi.es
 
+que está desarrollado en `Codeigniter 3`
 
 y que a su vez, obtiene los contenidos del CRM y que está en:
 
 https://crm.idi.es
 
 
-
+que es `Sugarcrm`
