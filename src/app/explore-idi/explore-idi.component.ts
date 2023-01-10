@@ -19,14 +19,16 @@ export class ExploreIdiComponent implements OnInit {
   public categorias: reqCategory[]  
   public categoria: OneCategory[] = []
   public currentLang: string
-  public rootCategory: string = '352' /* id de la categoría raíz 'idi-web-root', el punto de entrada a la web */
+  public rootCategory: string = '352' /* ID de la categoría raíz 'idi-web-root', el punto de entrada a la web */
 
-  constructor( public translateService: TranslateService, private categoryService: CategoryService, private articleService: ArticleService, private messageService: MessageService, private route: ActivatedRoute,
+  constructor( public translateService: TranslateService, private categoryService: CategoryService, 
+     private messageService: MessageService, private route: ActivatedRoute,
     private router: Router ) { }
 
     ngOnInit(): void {
    
       this.messageService.add("Cargando explore idi home...")
+      
       switch (this.translateService.currentLang) {
         case 'ca':
           this.currentLang = 'ca-ES'
@@ -42,6 +44,8 @@ export class ExploreIdiComponent implements OnInit {
       }
 
       this.getChildCategories( this.rootCategory )
+
+      console.log ( this.categoria )
       
     }
 
@@ -66,7 +70,8 @@ export class ExploreIdiComponent implements OnInit {
                this.getCategoryDetail( catID ) 
             })
 
-            this.categoria = this.categoria.sort( (x:OneCategory, y:OneCategory) => (x.data.attributes.title > y.data.attributes.title) ? 1 : -1 ) 
+            this.categoria = this.categoria.sort( /* (x:OneCategory, y:OneCategory) => (x.data.id > y.data.id) ? 1 : -1  */)
+
         })
   }
 

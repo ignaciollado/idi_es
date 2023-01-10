@@ -1,42 +1,38 @@
+<div class="projects-banner" *ngIf="currentLang === 'es-ES'">
+  <h2>{{mainCategoryAttributes.data.attributes.note}}
+  {{subCategoryAttributes.data.attributes.note}}</h2> 
+</div>
 
-<div class="detail-news-container" *ngIf="unaNoticiaAttribute">
+<div *ngIf="currentLang === 'ca-ES'">
+  <h2>{{mainCategoryAttributes.data.attributes.title}}</h2>
+<h3>Proyectos de {{subCategoryAttributes.data.attributes.title}}</h3> 
+</div>
+
+
+<div class="projects-container" *ngIf="contents">
+
+  <div class="alert alert-info" role="alert"  *ngIf="!contents.length > 0">
+    <h3>{{'noHayPublicoObjetivo' | translate}}</h3>
+  </div>
+
+  <div *ngFor="let item of contents">
+
+    <a [routerLink]="['/idi-detail', item.id]">
+      <div class="card">
+        <div>
+          <img class="card-head" src={{item.attributes.images.image_intro}} alt={{item.attributes.title}} title={{item.attributes.title}} />
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">{{item.attributes.title}}</h4>
+        </div>
+      </div>
+    </a>
   
-  <div class="card">
-    <div class='idi__service'>
-     <h2>{{unaCategoria}}</h2>
-    </div>
-
-    <div class='card__head'>
-      <img src={{unaNoticiaAttribute.images.image_fulltext}} alt="{{unaNoticiaAttribute.title}}" title="{{unaNoticiaAttribute.title}}">
-    </div>
-      
-    <div>
-      <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
-      
-    </div>
-
-    <div class="card__body" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/') | highlightSearchTerm:searhcTerm  | wellFormattedLink">
-    </div>
-
   </div>
 
 </div>
 
-<!-- <small class="barra_meta">{{'Links' | translate}}:</small>
-        <ul class="enlaces__relacionados">
-            <li><a class="noticia-tag-item" target="_blank" href="{{unaNoticiaAttribute.urls.urla}}">{{unaNoticiaAttribute.urls.urlatext}}</a></li>
-            <li><a class="noticia-tag-item" target="_blank" href="{{unaNoticiaAttribute.urls.urlb}}">{{unaNoticiaAttribute.urls.urlbtext}}</a></li>
-            <li><a class="noticia-tag-item" target="_blank" href="{{unaNoticiaAttribute.urls.urlc}}">{{unaNoticiaAttribute.urls.urlctext}}</a></li>
-        </ul> -->
-<small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
-<div class="noticia-tag">
-  <div *ngFor="let item of unaNoticiaAttribute.tags | keyvalue">
-    <a class="noticia-tag-item" routerLink="/idi-result-list/{{item.value}}">{{item.value}}</a>
-  </div>
-</div>
-<hr>
-
-<div *ngIf="!unaNoticiaAttribute">
+<div *ngIf="!contents">
   <i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}
 </div>
 

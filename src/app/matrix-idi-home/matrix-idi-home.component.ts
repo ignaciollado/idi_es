@@ -30,6 +30,7 @@ export class MatrixIdiHomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.messageService.add("Cargando parent matrix idi home...")
+
     switch (this.translateService.currentLang) {
       case 'ca':
         this.currentLang = 'ca-ES'
@@ -45,7 +46,7 @@ export class MatrixIdiHomeComponent implements OnInit {
     }
 
     this.getChildCategories( this.rootCategory ) /* Get child categories from 'idi-web-root' */
-
+    
   }
 
   getChildCategories( parentCategory: string ) {

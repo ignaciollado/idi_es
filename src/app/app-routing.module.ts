@@ -39,7 +39,7 @@ const routes: Routes = [
     { path: 'idi-history-services', title: 'Històric serveis IDI', component: HistoryServicesIdiComponent},
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
     { path: 'idi-detail/:id', component: NoticiaDetailComponent },
-    { path: 'idi-level-one/:id/:idCat', component:LevelOneComponent},
+    { path: 'idi-level-one/:idSubCat/:idMainCat', component:LevelOneComponent},
     { path: 'feder-detail/:id', component: FederDetailComponent },
 
     { path: 'idi-transparency-detail/:id', component: TransparencyDetailComponent },

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OneArticle, attrOneArticle, Category } from '../model/oneArticle.model';
 import { ArticleService } from '../services/article.service';
 import { MessageService } from '../services/message.service';
 import { Router, ActivatedRoute,  } from '@angular/router';
@@ -9,21 +10,18 @@ import { Article, reqArticle } from '../model/article.model';
 
 
 @Component({
-  selector: 'app-level-one',
-  templateUrl: './level-one.component.html',
-  styleUrls: ['./level-one.component.css']
+  selector: 'app-level-two',
+  templateUrl: './level-two.component.html',
+  styleUrls: ['./level-two.component.css']
 })
-export class LevelOneComponent implements OnInit {
+export class LevelTwoComponent implements OnInit {
 
   public contents: reqArticle[]; 
-  public mainCategoryAttributes: OneCategory
-  public subCategoryAttributes: OneCategory
-
+  public unaNoticiaAttribute: attrOneArticle
   public unaCategoria: string
   public currentLang: string
 
-  constructor(  public translateService: TranslateService, private getContent: ArticleService, 
-    private getCategory: CategoryService,
+  constructor(  public translateService: TranslateService, private getContent: ArticleService, private getCategory: CategoryService, 
     private messageNoticia: MessageService, private route: ActivatedRoute,
     private router: Router ) { }
 
@@ -45,18 +43,28 @@ export class LevelOneComponent implements OnInit {
       default:
         this.currentLang = 'ca-ES'
     }
-   
-    this.getTheAsignedProjects (idSubCat, this.currentLang)
-    this.getMainCategoryDetail (idMainCat, this.currentLang)
-    this.getSubCategoryDetail (idSubCat, this.currentLang)
+    console.log (idSubCat, idMainCat )
+    /* this.getUnContenido(idSubCat) */
 
-    console.log ( this.mainCategoryAttributes )
-    
+    this.getTheAsignedContents (idSubCat, this.currentLang)
+
     window.scroll(0,0)
 
   }
 
-  getTheAsignedProjects (currentCategory:string, currentLanguage: string) {
+/*   getUnContenido (id:string) {
+
+    this.getNoticia.getArticle(id)
+
+      .subscribe( (resp: OneArticle) => {
+        this.unaNoticiaAttribute = resp.data.attributes
+      })
+  
+    } */
+
+    getTheAsignedContents (currentCategory:string, currentLanguage: string) {
+      
+      console.log (currentCategory, currentLanguage)
       
       this.getContent.getArticles ()
   
@@ -69,30 +77,7 @@ export class LevelOneComponent implements OnInit {
 
         })
       
-  }
-
-  getMainCategoryDetail( catID: string, currentLanguage: string ) {
-        console.log ( catID, currentLanguage )
-
-        this.getCategory.getCategory(catID)
-        .subscribe( (category:OneCategory) => {
-
-            this.mainCategoryAttributes = category
-                 
-              })
-       
-  }
-
-  getSubCategoryDetail( catID: string, currentLanguage: string ) {
-    console.log ( catID, currentLanguage )
-
-    this.getCategory.getCategory(catID)
-    .subscribe( (category:OneCategory) => {
-
-        this.subCategoryAttributes = category
-             
-          })
-   
-}
+      console.log ( this.contents )
+      }
 
 }
