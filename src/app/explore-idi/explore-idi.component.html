@@ -1,19 +1,24 @@
 
 <h2>{{'ExploraIDI' | translate}}</h2> 
-<div [ngClass]="{'explore-idi-container': exploraIDI.length > 0}" *ngIf="exploraIDI">
+<div class="explore-idi-container" *ngIf="categoria">
  
-  <div class="alert alert-info" role="alert"  *ngIf="!exploraIDI.length > 0">
+  <div class="alert alert-info" role="alert"  *ngIf="!categoria.length > 0">
    <h3>{{'noHayPublicoObjetivo' | translate}}</h3>
   </div>
-  
-  <div *ngFor="let noticia of exploraIDI">
-    <a href="#{{noticia.relationships.category.data.id}}">
+ 
+  <div *ngFor="let item of categoria">
+    <a href="#{{item.data.id}}">
       <div class="card">
         <div>
-          <img class="card-head" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />
-        </div>
+          <img class="card-head" src="https://contents.idi.es/{{item.data.attributes.params.image}}" alt={{item.data.attributes.title}} title={{item.data.attributes.title}} />
+        </div> 
         <div class="card-body">
-          <h4 class="card-title">{{noticia.attributes.title}}</h4>
+          <div *ngIf="currentLang === 'es-ES'">
+            <h4 class="card-title">{{item.data.attributes.note}}</h4>
+          </div>
+          <div *ngIf="currentLang === 'ca-ES'">
+            <h4 class="card-title">{{item.data.attributes.title}}</h4>
+          </div>  
         </div>
       </div>
     </a>
@@ -21,7 +26,7 @@
 
 </div>
 
-<div *ngIf="!exploraIDI" class="explore-idi-container">
+<div *ngIf="!categoria" class="explore-idi-container">
   <!-- <i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingNews' | translate}} -->
 
   <div class="card" aria-hidden="true" id="noticiaUnoPlaceHolder">

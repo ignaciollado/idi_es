@@ -37,6 +37,7 @@ export interface attrCategory {
     count_published:   number;
     count_archived:    number;
     servicio_idi:      ServicioIDI;
+    params:            Params;
 }
 
 export enum AccessLevel {
@@ -70,4 +71,10 @@ export interface Meta {
 export interface ServicioIDI {
     SI: "SI",
     NO: "NO",
+}
+
+export interface Params {
+    category_layout: string;
+    image:           string;
+    image_alt:       string;
 }

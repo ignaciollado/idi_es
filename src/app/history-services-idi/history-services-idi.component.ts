@@ -133,7 +133,7 @@ export class HistoryServicesIdiComponent implements OnInit {
                 }
           })
 
-          this.tagsHistoryIDI = arrayTemp
+          this.tagsHistoryIDI = arrayTemp.sort()
         })
       })
       

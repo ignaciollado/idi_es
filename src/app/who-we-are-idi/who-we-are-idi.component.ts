@@ -51,6 +51,7 @@ export class WhoWeAreIdiComponent implements OnInit {
 
           this.categorias = categorias.data
           this.categorias = this.categorias.filter( ( item : reqCategory ) => item.attributes.published === 1 )
+          this.categorias = this.categorias.filter( ( item : reqCategory ) => item.id != '369' ) /* quito la cat 'Projectes IDI' */
           this.categorias = this.categorias.sort( (x:reqCategory, y:reqCategory) => (x.attributes.title > y.attributes.title) ? 1 : -1 )
 
           this.categorias.map ( item => {
@@ -72,7 +73,7 @@ export class WhoWeAreIdiComponent implements OnInit {
       .subscribe( (category:OneCategory) => {
 
         this.rootCategoryDetails = category
-        console.log (`Category details: ${this.rootCategoryDetails}`)
+        /* console.log (`Category details: ${this.rootCategoryDetails}`) */
       })
   }
 

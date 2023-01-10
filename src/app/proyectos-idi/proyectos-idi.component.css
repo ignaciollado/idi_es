@@ -1,0 +1,21 @@
+.proyectos-idi {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  grid-template-areas: "cabecera detalle";
+  border-bottom: 1px solid #000;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.idi-service-title {
+  grid-area: cabecera;
+  font-size: 30px;
+}
+
+.idi-service-detail {
+  grid-area: detalle;
+  padding-left: 1rem;
+  line-height: 3.5rem;
+  font-size: 2rem;
+}

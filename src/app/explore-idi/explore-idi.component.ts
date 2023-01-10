@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { Article, attrArticle, reqArticle } from '../model/article.model';
 import { ArticleService } from '../services/article.service';
 import { CategoryService } from '../services/category.service';
 import { MessageService } from '../services/message.service';
 import { Router, ActivatedRoute,  } from '@angular/router';
 import { Category, reqCategory } from '../model/category.model';
+import { OneCategory } from '../model/oneCategory.model';
 
 @Component({
   selector: 'app-explore-idi',
@@ -15,13 +15,11 @@ import { Category, reqCategory } from '../model/category.model';
 })
 export class ExploreIdiComponent implements OnInit {
 
-  public exploraIDI: reqArticle[]
   public childCat_exploraIDI: string[] = []
-  public noticias: reqArticle[]
-  public categorias: reqCategory[]
-  public noticiasAttributes: attrArticle
+  public categorias: reqCategory[]  
+  public categoria: OneCategory[] = []
   public currentLang: string
-  public rootCategory: string = '352' /* id de la categoría raíz 'idi-web-root', el punto de entrada */
+  public rootCategory: string = '352' /* id de la categoría raíz 'idi-web-root', el punto de entrada a la web */
 
   constructor( public translateService: TranslateService, private categoryService: CategoryService, private articleService: ArticleService, private messageService: MessageService, private route: ActivatedRoute,
     private router: Router ) { }
@@ -54,6 +52,7 @@ export class ExploreIdiComponent implements OnInit {
 
             this.categorias = categorias.data
             this.categorias = this.categorias.filter( ( item : reqCategory ) => item.attributes.published === 1 )
+            this.categorias = this.categorias.filter( ( item : reqCategory ) => item.attributes.parent_id.toString() === `${parentCategory}` )
 
             this.categorias.map ( item => {
 
@@ -63,25 +62,24 @@ export class ExploreIdiComponent implements OnInit {
            
             })
 
-            this.getNoticias( this.currentLang, this.childCat_exploraIDI )
+            this.childCat_exploraIDI.forEach ( ( catID:string ) => {
+               this.getCategoryDetail( catID ) 
+            })
 
+            this.categoria = this.categoria.sort( (x:OneCategory, y:OneCategory) => (x.data.attributes.title > y.data.attributes.title) ? 1 : -1 ) 
         })
   }
 
-  getNoticias( currentLanguage:string, childCategories: string[] ) {
+  getCategoryDetail( catID: string ) {
 
-      this.articleService.getArticles()
-          .subscribe( (resp:Article) => {
-  
-            this.noticias = resp.data
-            this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.state === 1)
-            this.noticias = this.noticias.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`)
-    
-            this.exploraIDI = this.noticias.filter( (item : reqArticle) => childCategories.includes( item.relationships.category.data.id ) )
-            this.exploraIDI = this.exploraIDI.sort( (x:reqArticle,y:reqArticle) => (x.attributes.title > y.attributes.title) ? 1 : -1 ) /* Todos los artículos ordenados*/
-          
-          } ) 
-  
-        }
+        this.categoryService.getCategory(catID)
+        .subscribe( (category:OneCategory) => {
+
+            this.categoria.push ( category )
+                 
+              })
+       
+  }
+
 
 }
