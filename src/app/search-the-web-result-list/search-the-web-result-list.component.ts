@@ -26,10 +26,10 @@ export class SearchTheWebResultListComponent implements OnInit {
 
     this.searchTerm = this.route.snapshot.paramMap.get('searchTerm')
     switch (this.translateService.currentLang) {
-      case 'ca':
+      case 'cat':
         this.currentLang = 'ca-ES'
       break
-      case 'es':
+      case 'cas':
         this.currentLang = 'es-ES'      
       break
       case 'en':

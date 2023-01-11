@@ -43,11 +43,11 @@ export class ServiceIdiDetailComponent implements OnInit {
     let idCat:string = this.route.snapshot.paramMap.get('idCat')
 
     switch (this.translateService.currentLang) {
-      case 'ca':
+      case 'cat':
         this.currentLang = 'ca-ES'
         this.subPath = this.currentLang+"/"
       break
-      case 'es':
+      case 'cas':
         this.currentLang = 'es-ES'      
       break
       case 'en':

@@ -32,10 +32,10 @@ export class WhoWeAreIdiChildComponent implements OnInit {
   ngOnInit(): void {
 
     switch (this.translateService.currentLang) {
-      case 'ca':
+      case 'cat':
         this.currentLang = 'ca-ES'
       break
-      case 'es':
+      case 'cas':
         this.currentLang = 'es-ES'      
       break
       case 'en':

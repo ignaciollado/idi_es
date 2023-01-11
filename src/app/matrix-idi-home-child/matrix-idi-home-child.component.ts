@@ -34,10 +34,10 @@ export class MatrixIdiHomeChildComponent implements OnInit {
     this.messageService.add("Cargando child matrix idi home...")
 
     switch (this.translateService.currentLang) {
-      case 'ca':
+      case 'cat':
         this.currentLang = 'ca-ES'
       break
-      case 'es':
+      case 'cas':
         this.currentLang = 'es-ES'      
       break
       case 'en':

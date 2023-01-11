@@ -30,10 +30,10 @@ export class ExploreIdiComponent implements OnInit {
       this.messageService.add("Cargando explore idi home...")
       
       switch (this.translateService.currentLang) {
-        case 'ca':
+        case 'cat':
           this.currentLang = 'ca-ES'
         break
-        case 'es':
+        case 'cas':
           this.currentLang = 'es-ES'      
         break
         case 'en':

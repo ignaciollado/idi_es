@@ -33,10 +33,10 @@ export class LevelTwoComponent implements OnInit {
     let idMainCat:string = this.route.snapshot.paramMap.get('idMainCat')
 
     switch (this.translateService.currentLang) {
-      case 'ca':
+      case 'cat':
         this.currentLang = 'ca-ES'
       break
-      case 'es':
+      case 'cas':
         this.currentLang = 'es-ES'      
       break
       case 'en':
