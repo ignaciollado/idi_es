@@ -1,28 +1,18 @@
-<h3>{{'queOfrecemos' | translate}}.{{'queOfrecemosHistorico' | translate}}</h3>
-<hr>
+<div class="projects-banner" *ngIf="currentLang === 'es-ES'">
+  <h2>{{'queOfrecemos' | translate}}. {{'queOfrecemosHistorico' | translate}}</h2> 
+</div>
+
 <div class="tags-container" *ngIf="tagsHistoryIDI"> 
 
     <div class="card" *ngFor="let tag of tagsHistoryIDI">
-     <!-- <a class="noticia-tag-item" routerLink="/idi-result-list/{{tag}}" --> 
-       <!--  <div class='card-body'>
-          <h2>{{tag}}</h2> 
-        </div>  -->
-      
 
       <div class="card-block px-6">
-        <!-- <h4 class="card-title">Horizontal Card with Carousel - Bootstrap 4 </h4> -->
         <h2>{{tag}}</h2>
-        <!-- <p class="card-text">Made for usage, commonly searched for. Fork, like and use it. Just move the carousel div above the col containing the text for left alignment of images</p> -->
         <br>
         <a routerLink="/idi-result-list/{{tag}}" class="mt-auto btn btn-lg btn-secondary">{{'ViewRelatedContents' | translate}}</a>
       </div>
-    <!-- </a> -->
+
     </div>
-
-
-
-
-   
 
 </div>
 

@@ -49,8 +49,6 @@ export class LevelOneComponent implements OnInit {
     this.getTheAsignedProjects (idSubCat, this.currentLang)
     this.getMainCategoryDetail (idMainCat, this.currentLang)
     this.getSubCategoryDetail (idSubCat, this.currentLang)
-
-    console.log ( this.mainCategoryAttributes )
     
     window.scroll(0,0)
 
@@ -72,7 +70,6 @@ export class LevelOneComponent implements OnInit {
   }
 
   getMainCategoryDetail( catID: string, currentLanguage: string ) {
-        console.log ( catID, currentLanguage )
 
         this.getCategory.getCategory(catID)
         .subscribe( (category:OneCategory) => {
@@ -84,7 +81,6 @@ export class LevelOneComponent implements OnInit {
   }
 
   getSubCategoryDetail( catID: string, currentLanguage: string ) {
-    console.log ( catID, currentLanguage )
 
     this.getCategory.getCategory(catID)
     .subscribe( (category:OneCategory) => {

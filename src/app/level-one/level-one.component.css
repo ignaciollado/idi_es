@@ -5,11 +5,14 @@
   gap: .9rem;
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .projects-banner {
-  background-color: #000;
-  color: #fff;
-  padding: .12rem;
   margin-bottom: 1rem;
+  border-bottom: 3px solid black;
 }
 
 .projects-container {

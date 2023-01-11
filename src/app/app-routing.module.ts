@@ -28,17 +28,15 @@ import { ReempresaIdiComponent } from './reempresa-idi/reempresa-idi.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { TransparencyDetailComponent } from './transparency-detail/transparency-detail.component';
 import { LevelOneComponent } from './level-one/level-one.component';
+import { LevelTwoComponent } from './level-two/level-two.component';
 
 const routes: Routes = [
 
     { path: '', title: "Institut d'Innovació Empresarial de les Illes Balears", component: HomeComponentComponent },
-  /*   { path: 'home', title: "Institut d'Innovació Empresarial de les Illes Balears", component: HomeComponentComponent }, */
-
     { path: 'idi-who-we-are/:id', title: 'Qui som', component: WhoWeAreIdiComponent },
-   /*  { path: 'idi-featured-detail/:id', title: 'Destacats IDI', component: FeaturedIdiDetailComponent }, */
     { path: 'idi-history-services', title: 'Històric serveis IDI', component: HistoryServicesIdiComponent},
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
-    { path: 'idi-detail/:id', component: NoticiaDetailComponent },
+    { path: 'idi-level-two/:id/:idMainCat', component: LevelTwoComponent },
     { path: 'idi-level-one/:idSubCat/:idMainCat', component:LevelOneComponent},
     { path: 'feder-detail/:id', component: FederDetailComponent },
 
@@ -51,43 +49,16 @@ const routes: Routes = [
 
     { path: 'show-menu-option/:id', title: 'Detall del contingut IDI', component: MenuHomeIdiComponent },
 
-/*     { path: 'emprendedor-creacion-empresa/:id', component: MenuHomeIdiComponent },
-    { path: 'emprendedor-disenyo/:id', component: MenuHomeIdiComponent },
-    { path: 'emprendedor-registro-marca-producto/:id', component: MenuHomeIdiComponent },
-    { path: 'emprendedor-reempresa/:id', component: MenuHomeIdiComponent },
-    { path: 'emprendedor-vivero-coworking/:id', component: MenuHomeIdiComponent }, */
-
-/*     { path: 'empresa-internacionalizacion/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-reempresa/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-registro-marca-producto/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-digitalizacion/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-ferias/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-sostenibilidad/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-financiacion/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-clusters/:id', component: MenuHomeIdiComponent },
-    { path: 'empresa-disenyo/:id', component: MenuHomeIdiComponent }, */
-
-/*     { path: 'sectores-comercio/:id', component: SectoresIdiComponent },
-    { path: 'sectores-moda/:id', component: SectoresIdiComponent },
-    { path: 'sectores-nautica/:id', component: SectoresIdiComponent },
-    { path: 'sectores-habitat/:id', component: SectoresIdiComponent },
-    { path: 'sectores-agroalimentario/:id', component: SectoresIdiComponent },
-    { path: 'sectores-industria/:id', component: SectoresIdiComponent }, */
-
-/*     { path: 'sectors-idi-hlp-detail/:id/:idCat', component: MenuHomeEmprendedorDetailComponent },
-    { path: 'sectors-idi-srv-detail/:id/:idCat', component: MenuHomeEmprendedorDetailComponent }, */
-
     { path: 'reempresa-reempresa/:id/:col', component: ReempresaIdiComponent },
 
     { path: 'ayudas-subvenciones', component: AyudasSubvencionesIdiDetailComponent },
 
     { path: 'idi-list-news/:id', component: NoticiasComponent },
+    { path: 'idi-detail-news/:id', component: NoticiaDetailComponent },
 
     { path: 'idi-result-list/:searchTerm', component: SearchTheWebResultListComponent},
 
     { path: 'agenda-events', component: FormacionAgendaIdiComponent },
-
-    /* { path: 'formacion-webinars', component: FormacionWebinarsIdiComponent }, */
 
     { path: 'transparencia/:id', component: TransparenciaIdiComponent },
 
