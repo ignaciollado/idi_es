@@ -70,7 +70,7 @@ a {
     text-decoration: underline none #a3d4db 30%!important;
 }
 
-  .barra_meta {
+.barra_meta {
     border-bottom: 5px solid #ededed;
     display: block;
     padding: 5px 0 0 0;
@@ -79,6 +79,10 @@ a {
 
 h1 {
     margin-bottom: 2rem!important;
+}
+
+img {
+    width: 100%;
 }
 
 @media only screen and (max-width: 795px) {
