@@ -14,9 +14,9 @@ body {
   font-family: "Nunito sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"!important;
   color: rgb(51, 51, 51);
   box-sizing: border-box;
-  /* margin: 1%; */
   line-height: 1.8rem!important;
 }
+
 ::selection {
   color: #fff;
   background: #4a7586;
@@ -77,6 +77,24 @@ p a {
 
 .card {
   border: none;
+}
+
+.departamento__IDI {
+  margin-bottom: 2rem;
+}
+
+.departamento__IDI--nombre {
+  font-weight: bold;
+}
+
+.departamento__IDI--tel {
+  /* margin-left: .5rem; */
+  margin-bottom: .5rem;
+}
+
+.departamento__IDI--mail {
+  /* margin-left: .5rem; */
+  margin-bottom: .5rem;
 }
 
 @media only screen and (max-width: 795px) {

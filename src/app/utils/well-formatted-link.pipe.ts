@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class WellFormattedLinkPipe implements PipeTransform {
 
   transform(theLink: string, ...args: unknown[]): string {
-    console.log(theLink)
+    
     let regex = /\dd/g
 
     theLink=theLink.replaceAll('index.php?option=com_content&amp;view=article&amp;id=',"idi-level-two/")

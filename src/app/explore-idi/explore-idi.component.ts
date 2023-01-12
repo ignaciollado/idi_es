@@ -45,7 +45,7 @@ export class ExploreIdiComponent implements OnInit {
 
       this.getChildCategories( this.rootCategory )
 
-      console.log ( this.categoria )
+      /* console.log ( this.categoria ) */
       
     }
 

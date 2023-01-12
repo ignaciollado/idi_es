@@ -1,11 +1,14 @@
 <div class='proyectos-idi'>
 
-  <div class="idi-service-title">Proyectos IDI</div>
+  <div class="idi-service-title">{{"estructuraIDI" | translate}}</div>
 
   <div class='idi-service-detail'>
-    <div *ngFor="let childCategory of childCatMatrixHomeIDI">
-      <strong>{{childCategory | categoryTitle:currentLang}}</strong>
-      <app-proyectos-idi-child childCategory="{{childCategory  | categoryID}}" class="category-articles"></app-proyectos-idi-child>
+    <div *ngFor="let noticia of noticias">
+     
+
+      <div [innerHTML]="noticia.attributes.text"></div>
+
+    
     </div>
   </div>
 

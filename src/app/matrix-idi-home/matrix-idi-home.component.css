@@ -1,18 +1,22 @@
 .category-container {
   display: grid;
   grid-template-areas: "theTitle" "theArticles";
+
   margin-bottom: 1.5rem;
-  gap: .9rem;
+  /* gap: .9rem; */
+  /* border: 1px solid red; */
 }
 
 .main-category-title {
   grid-area: theTitle;
   font-size: 4rem;
   font-weight: 400;
+  /* border: 1px solid blue; */
 }
 
 .category-articles {
   grid-area: theArticles;
+  /* border: 1px solid grey; */
 }
 
 h2 {

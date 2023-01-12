@@ -67,9 +67,10 @@ h6{
 }
 
 @media only screen and (max-width: 795px) {
-    .proyects-container {
+    .projects-container {
       grid-template-columns: repeat(1, 1fr);
       gap: 0;
+      
     }
 
     .card {

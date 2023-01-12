@@ -10,12 +10,11 @@
 
 .idi-service-title {
   grid-area: cabecera;
-  font-size: 30px;
+  font-size: 2.5rem;
 }
 
 .idi-service-detail {
   grid-area: detalle;
-  padding-left: 1rem;
-  line-height: 3.5rem;
   font-size: 2rem;
 }
+
