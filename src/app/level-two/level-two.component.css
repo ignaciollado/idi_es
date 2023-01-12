@@ -40,7 +40,7 @@ h1, h2 {
 .card__body {
   grid-area: texto;
   padding-right: 4rem;
-  line-height: 3.5rem;
+  line-height: 2.7rem;
   font-size: 2rem;
 }
 

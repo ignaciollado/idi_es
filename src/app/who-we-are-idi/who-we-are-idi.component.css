@@ -1,7 +1,7 @@
 .who-we-are-container {
   display: grid;
   grid-template-columns: .8fr 1fr;
-  line-height: 3rem;
+  line-height: 2.7rem;
   font-size: 2rem;
   border-bottom: 1px solid #000;
   margin-bottom: 2rem;
