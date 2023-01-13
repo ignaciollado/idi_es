@@ -58,7 +58,6 @@ export class HistoryServicesIdiComponent implements OnInit {
 
           this.categorias = categorias.data
           this.categorias = this.categorias.filter( ( item : reqCategory ) => item.attributes.published === 1 )
-          //this.categorias = this.categorias.sort( (x:reqCategory, y:reqCategory) => (x.attributes.title > y.attributes.title) ? 1 : -1 )
 
           this.categorias.map ( (item:reqCategory) => {
 
@@ -69,7 +68,6 @@ export class HistoryServicesIdiComponent implements OnInit {
             }
 
           })
-          /* console.log (this.childCatMatrixHomeIDI) */
           this.getChildChildCategories ( this.childCatMatrixHomeIDI )
       })
      
@@ -77,7 +75,6 @@ export class HistoryServicesIdiComponent implements OnInit {
 
   getChildChildCategories ( childCategories: string[] ) {
 
-    /* console.log ( `Buscar categorías hijas de ${childCategories}` ) */
 
     this.categoryService.getCategories()
     .subscribe( ( categorias:Category ) => {
@@ -90,7 +87,7 @@ export class HistoryServicesIdiComponent implements OnInit {
 
           if ( childCategories.includes ( item.attributes.parent_id.toString() ) ) {
 
-            this.childCatMatrixHomeIDI.push(`${item.attributes.id.toString()}`) /* Si es cat el nombre esta en 'title', si es esp el nombre está en 'note' */
+            this.childCatMatrixHomeIDI.push(`${item.attributes.id.toString()}`)
 
           }
 
@@ -117,6 +114,7 @@ export class HistoryServicesIdiComponent implements OnInit {
   }
 
   getUnArticulo (id:string) {
+
     let arrayTemp:string[] = []
     this.articleService.getArticle(id)
       .subscribe( (resp: OneArticle) => {
@@ -125,9 +123,9 @@ export class HistoryServicesIdiComponent implements OnInit {
       
           this.tagsHistoryIDI.push( `${value}` )
           this.tagsHistoryIDI.sort()
-
+          
           this.tagsHistoryIDI.map( theTag => { /* Quito etiquetas duplicadas */
-                if (!arrayTemp.includes(theTag)) {
+                if (!arrayTemp.includes(theTag.trim())) {
                   const theTagFirstLetterCap = theTag.charAt(0).toUpperCase() + theTag.slice(1); /* y pongo la primera letra en capitals */
                   arrayTemp.push(theTagFirstLetterCap)
                 }
