@@ -1,11 +1,12 @@
 
 <form [formGroup]="searchTheWebForm" (ngSubmit)="onSubmit(searchTheWebForm)" novalidate class="form-inline">
     <div class="form-group">
-        <input [class.is-invalid] = "searchTerm.invalid && searchTerm.touched" placeholder="{{'searchTheWeb' | translate}}"
-      type="text" class="form-control" formControlName="searchTerm" />
+      <input [class.is-invalid] = "searchTerm.invalid && searchTerm.touched" placeholder="{{'searchTheWeb' | translate}}"
+      type="text" formControlName="searchTerm" role="searchbox" />
       <a routerLink="/idi-result-list/{{searchTerm.value}}" *ngIf="submitted && !spinner" type="button" class="btn btn-primary">Coincidencias <span class="badge badge-light">{{totalFound}}</span></a>
       <!-- <a *ngIf="submitted && !spinner" type="button" class="btn btn-primary" (click)="showListResults(searchTerm)"> 
         Coincidencias <span class="badge badge-light">{{totalFound}}</span>
-      </a> --><i *ngIf="spinner" class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
+      </a> -->
+      <i *ngIf="spinner" class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
     </div>
 </form>

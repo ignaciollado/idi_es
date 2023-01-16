@@ -1,11 +1,12 @@
 
-<h2>{{'ExploraIDI' | translate}}</h2> 
+<h2>{{'ExploraIDI' | translate}}</h2>
+
+<div class="alert alert-info" role="alert"  *ngIf="!categoria">
+  <h3>{{'gettingContentsIDI' | translate}}</h3>
+</div>
+
 <div class="explore-idi-container" *ngIf="categoria">
- 
-  <div class="alert alert-info" role="alert"  *ngIf="!categoria.length > 0">
-   <h3>{{'noHayPublicoObjetivo' | translate}}</h3>
-  </div>
- 
+  
   <div *ngFor="let item of categoria">
 
     <a href="#{{item.data.id}}">

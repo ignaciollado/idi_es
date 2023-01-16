@@ -1,4 +1,22 @@
+form {
+    padding-top: .5rem;
+}
+
 .btn-primary {
     color: #ffffff!important;
     background: #a2d3da;
+}
+
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: .5rem;
+
+}
+
+input:focus{
+    outline: none;
+    background-color: #a2d3da;
+    color: #ffffff;
 }

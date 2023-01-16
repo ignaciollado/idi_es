@@ -21,15 +21,10 @@
   border: none;
   margin-bottom: 2rem;
 }
-/* .card:hover {
-  border: 1px solid;
-  box-shadow: 5px 10px 8px #888888;
-}   */
 
 .card-head {
   grid-area: image;
   margin-bottom: .5rem;
-  /* max-width: 262px; */ /* se lo tengo que poner porque las imágenes que usan son de 268px */
 }
 
 .card-body {
@@ -38,7 +33,11 @@
   max-height: 12rem;
   line-height: 1.4285em;
   padding-left: 5px;
-}  
+} 
+
+.card-title {
+  font-weight: 200;
+}
 
 .card-date {
   grid-area: fecha;
@@ -59,11 +58,6 @@ h6{
   text-decoration: none!important;
   transition: opacity 0.3s linear 2s;
 }
-
-/* img {
-  max-width: 100%;  
-  height: auto;
-} */
 
 @media only screen and (max-width: 795px) {
     .last-news-container {

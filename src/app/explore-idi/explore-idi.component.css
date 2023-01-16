@@ -5,6 +5,11 @@
   gap: 1rem;
 }
 
+h2 {
+  font-weight: 200;
+  font-size: 3.43rem;
+}
+
 .alert {
   min-width: 100%;
   border: 1px solid black
@@ -14,10 +19,8 @@
   display: grid;
   grid-template-areas:  'image' 
                         'title';
-
   margin-bottom: 2rem;
 }
-
 
 .card-head {
   grid-area: image;
@@ -31,7 +34,7 @@
 }
 
 .card-title {
-  font-size: 1.6rem;
+  font-weight: 200!important;
 }
 
 @media only screen and (max-width: 795px) {

@@ -4,19 +4,25 @@
   
   <div *ngFor="let contenido of contenidos">
 
-    <div class="card">
+    
       <a [routerLink]="['/idi-search-detail', contenido.id, searchTerm]" [urlUpdateStrategy]="eager">
-        <div class="card-head">
-          <img src={{contenido.attributes.images.image_intro}} alt={{contenido.attributes.title}} title={{contenido.attributes.title}}>
-        </div>
-        <div class="card-body" ng-bind-html="contenido.attributes.title | highlight:searchTerm">
-          <h4 class="card-title" [innerHTML]="contenido.attributes.title | highlightSearchTerm:searchTerm"></h4>
-        </div>
-        <div class="card-footer">
-          <h6 class="card-date">{{contenido.attributes.created | date: 'dd/MM/yyyy'}}</h6>
+        <div class="card">
+          <div>
+            <img src={{contenido.attributes.images.image_intro}} alt={{contenido.attributes.title}} title={{contenido.attributes.title}}>
+          </div>
+          <div class="card-body" ng-bind-html="contenido.attributes.title | highlight:searchTerm">
+            <h6 class="card-date">{{contenido.attributes.created | date: 'dd/MM/yyyy'}}</h6>
+            <h4 class="card-title" [innerHTML]="contenido.attributes.title | highlightSearchTerm:searchTerm"></h4>
+          </div>
+          <!-- <div class="card-footer">
+              <h6 class="card-date">{{contenido.attributes.created | date: 'dd/MM/yyyy'}}</h6>
+          </div> -->
+          <!--  <div class="card-body" ng-bind-html="contenido.attributes.title | highlight:searchTerm"> -->
+          <!--           <h4 class="card-title" [innerHTML]="contenido.attributes.title | highlightSearchTerm:searchTerm"></h4>
+          </div> -->
         </div>
       </a>
-    </div>
+
 
   </div>
 

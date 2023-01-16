@@ -63,7 +63,7 @@ export class MatrixIdiHomeComponent implements OnInit {
             if ( item.attributes.parent_id.toString() === `${parentCategory}` ) {
 
               this.childCatMatrixHomeIDI.push(`${item.attributes.id.toString()}#${item.attributes.title}#${item.attributes.note}`) /* Si es cat el nombre esta en 'title', si es esp el nombre está en 'note' */
-
+              this.childCatMatrixHomeIDI = this.childCatMatrixHomeIDI.sort( (x:string, y:string) => (x > y) ? 1 : -1 )
             }
          
           })

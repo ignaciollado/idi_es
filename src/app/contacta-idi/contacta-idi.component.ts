@@ -26,7 +26,7 @@ export class ContactaIdiComponent implements OnInit {
     this.contactForm = this.formBuilder.group( {
       fullName: [ '', [Validators.required, Validators.min(3)] ],
       contactPhone: [ '', [ Validators.minLength(9), Validators.maxLength(9) ] ],
-      userSubject: ['', Validators.required],
+      userSubject: [''],
       userMessage: ['', Validators.required],
       primaryEmail: [ '', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")] ],
       acceptTerms: [ false, Validators.requiredTrue ]

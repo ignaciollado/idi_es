@@ -5,21 +5,24 @@ img {
 
 .card {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  grid-template-areas:  /* 'service service' */  
-                        'image image'
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:  'image image'
                         'title texto';
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+  font-weight: 200!important;
 }
 
 h1, h2 {
   margin-top: 0;
+  font-size: 3.43rem;
+  font-weight: 200!important;
 }
 
 .projects-banner {
-  margin-bottom: 1rem;
-  border-bottom: 3px solid black;
+  margin-bottom: 0;
+
+ /*  border-bottom: 3px solid black; */
 }
 
 .idi__service{
@@ -33,15 +36,16 @@ h1, h2 {
 
 .card__title {
   grid-area: title;
-  color:#7e7e7c;
-  font-weight: bolder;
+  font-weight: 200!important;
+  padding-right: 2rem;
 }
 
 .card__body {
   grid-area: texto;
   padding-right: 4rem;
-  line-height: 2.7rem;
-  font-size: 2rem;
+  line-height: 2.73rem;
+  font-size: 2.43rem;
+  color:#7e7e7c;
 }
 
 .noticia__tag{

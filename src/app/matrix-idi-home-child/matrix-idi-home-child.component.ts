@@ -59,13 +59,13 @@ export class MatrixIdiHomeChildComponent implements OnInit {
 
         this.childChildCategory = item.data
         this.childChildCategory = this.childChildCategory.filter( ( item : reqCategory ) => item.attributes.published === 1 )
-
+        this.childChildCategory = this.childChildCategory.sort( (x:reqCategory, y:reqCategory)=> (x.attributes.title > y.attributes.title) ? 1 : -1 ) 
         this.childChildCategory.map ( item => {
 
           if ( item.attributes.parent_id.toString() === `${childCategory}`) {
 
             this.childChildCatMatrixHomeIDI.push(item.attributes.id.toString())
-          
+
           }
         
         })
@@ -73,8 +73,6 @@ export class MatrixIdiHomeChildComponent implements OnInit {
         this.childChildCatMatrixHomeIDI.forEach ( ( catID:string ) => {
           this.getCategoryDetail( catID ) 
        })
-
-       this.categoria = this.categoria.sort( (x:OneCategory, y:OneCategory) => (x.data.attributes.title > y.data.attributes.title) ? 1 : -1 ) 
 
       } )
 
@@ -88,7 +86,7 @@ export class MatrixIdiHomeChildComponent implements OnInit {
         this.categoria.push ( category )
              
           })
-   
+        //this.categoria = this.categoria.sort( (x:OneCategory, y:OneCategory) => (x > y) ? 1 : -1 )
   }
 
 }

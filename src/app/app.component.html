@@ -6,9 +6,9 @@
         <img width="60" alt="logotipo del IDI" title="logotipo del Instituto de Innovación Empresarial de las Islas Baleares" src="../assets/images/logos/logo-idi.svg">
       </a>
     </div>
-    <div class="searchTheWebArea">
+    <!--     <div class="searchTheWebArea">
      <app-search-the-web></app-search-the-web>
-    </div>
+    </div> -->
     <div class="languageSelectArea">
       <span class="form-inline">
         <app-select-language></app-select-language>
@@ -44,7 +44,6 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/ayudas-subvenciones">{{'Ayudas_Subv' | translate}}</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" routerLink="/transparencia/291">{{'Transparencia' | translate}}</a>
           </li>
@@ -52,6 +51,7 @@
             <a class="nav-link" href="https://www.caib.es/seucaib/ca/" target="_blank">{{'Sede_Elect' | translate}}</a>
           </li>      
         </ul>
+        <app-search-the-web class="searchTheWebArea"></app-search-the-web>
       </div>
     </div>
   </nav>

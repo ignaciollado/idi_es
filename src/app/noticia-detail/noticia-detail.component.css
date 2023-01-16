@@ -8,15 +8,23 @@
 
 .card__head {
     grid-area: image;
-    max-width: 451px;
-    /* height: auto; */
-  }
+    max-width: 100%;
+}
 
 .card__body {
     grid-area: title;
     padding-left: 2rem;
-    line-height: 2.7rem;
-    font-size: 2rem;
+}
+
+.card__title {
+    font-size: 3.42rem;
+    font-weight: 200;
+}
+
+.card__text {
+    font-size: 2.43rem;
+    font-weight: 200;
+    line-height: 2.75rem;
 }
 
 .card__footer {

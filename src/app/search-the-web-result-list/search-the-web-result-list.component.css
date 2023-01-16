@@ -9,6 +9,28 @@
   margin-bottom: 2rem;
 }
 
+.card-date {
+  grid-area: fecha;
+  font-weight: 800;
+}
+
+.card-body {
+  font-weight: 200;
+  min-height: 12rem;
+  max-height: 12rem;
+  line-height: 1.4285em;
+  padding-left: 0;
+}
+
+.card-title {
+  font-weight: 200;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: none;
+}
+
 img{
   max-width: 262px; /* se lo tengo que poner porque las imágenes que usan son de 268px */
   }
@@ -16,10 +38,6 @@ img{
 a:hover {
     text-decoration:none solid rgb(223, 52, 52) 20%!important;
   }
-
-.card-title {
-  min-height: 6.5rem;
-}
 
 @media only screen and (max-width: 795px) {
   .search-result-container {

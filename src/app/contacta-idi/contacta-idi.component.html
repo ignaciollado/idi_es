@@ -1,11 +1,28 @@
-<div [hidden]="submitted">
-  <h2>{{'howCanWeHelpYou' | translate}}</h2>
-  <div>{{messageService.messages}}</div>
+<div class=''>
+  <img src="../../assets/images/cabeceras/cabecera-contacto-webidi.webp" alt='{{"Contacta" | translate}}' title='{{"Contacta" | translate}}' />
+</div>
+<div class="contact__formcontainer">
+  <div>
+
+  </div>
+
+  <div [hidden]="submitted">
+    <h1>{{"Contacta" | translate}}</h1>
+    <span>IDI · {{"IdiOneLine" | translate | uppercase}}</span><br>
+    <span>Plaça de Son Castelló, 1</span><br>
+    <span>07009 Palma</span><br>
+    <span>T. 971 176 161</span><br>
+    <!-- <span>info@idi.es</span> -->
+<!--   </div>
+
+  <div [hidden]="submitted"> -->
+  <!-- <h2>{{'howCanWeHelpYou' | translate}}</h2> -->
+  <div>{{messageService.messages | uppercase}}</div>
   <div class="contact-form">
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
       
       <div class="form-group">
-        <label>{{'fullName' | translate}}</label>
+        <label>{{'fullName' | translate | uppercase}}</label>
         <input placeholder="{{'writeHere' | translate}}"
           type="text"
           formControlName="fullName"
@@ -19,7 +36,7 @@
       </div>
 
       <div class="form-group">
-        <label>{{'contactPhone' | translate}}</label>
+        <label>{{'contactPhone' | translate | uppercase}}</label>
         <input [class.is-invalid] = "contactPhone.invalid && contactPhone.touched" placeholder="{{'writeHere' | translate}}"
         type="tel" class="form-control" formControlName="contactPhone" minlength="9" maxlength="9"/>
         <div *ngIf="(contactPhone.invalid && contactPhone.touched) || contactPhone.dirty">
@@ -29,7 +46,7 @@
       </div>
 
       <div class="form-group">
-        <label>{{'contactEmail' | translate}}</label>
+        <label>{{'contactEmail' | translate | uppercase}}</label>
         <input [class.is-invalid] = "primaryEmail.invalid && primaryEmail.touched" placeholder="{{'writeHere' | translate}}"
         type="email" class="form-control" formControlName="primaryEmail" />
         <div *ngIf="(primaryEmail.invalid && primaryEmail.touched) || primaryEmail.dirty">
@@ -39,17 +56,17 @@
         </div>
       </div>
 
-      <div class="form-group">
+<!--       <div class="form-group">
         <label>{{'subject' | translate}}</label>
         <input [class.is-invalid] = "userSubject.invalid && userSubject.touched" placeholder="{{'writeHere' | translate}}"
           type="text" class="form-control" formControlName="userSubject" />
         <div *ngIf="(userSubject.invalid && userSubject.touched) || userSubject.dirty">
           <small *ngIf="userSubject.errors?.['required']" class="is-invalid-lbl">{{'subject' | translate}} <strong>{{'isRequired' | translate}}</strong></small>
         </div>
-      </div>
+      </div> -->
 
       <div class="form-group">
-        <label>{{'yourMessage' | translate}}</label>
+        <label>{{'yourMessage' | translate | uppercase}}</label>
         <textarea rows="5" [class.is-invalid] = "userMessage.invalid && userMessage.touched" placeholder="{{'writeHere' | translate}}"
           formControlName="userMessage"
           class="form-control"></textarea>
@@ -87,7 +104,8 @@
       </div>
     </form>
   </div>
-</div>  
+  </div>  
+</div>
 <div [hidden]="!submitted" class="submitted-data">
   <div class="contact-form">
   <h2>{{'recievedOK' | translate}}</h2>
