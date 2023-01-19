@@ -14,7 +14,6 @@ h2 {
 
 .projects-banner {
   margin-bottom: 1rem;
-  border-bottom: 3px solid black;
 }
 
 .projects-container {
@@ -22,6 +21,7 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 1.5rem;
     gap: .9rem;
+    border-bottom: 1px solid grey;
 }
 
 .card {

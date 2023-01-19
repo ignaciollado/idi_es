@@ -45,7 +45,7 @@
             <a class="nav-link" routerLink="/ayudas-subvenciones">{{'Ayudas_Subv' | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/transparencia/291">{{'Transparencia' | translate}}</a>
+            <a class="nav-link" routerLink="/idi-transparency/291">{{'Transparencia' | translate}}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://www.caib.es/seucaib/ca/" target="_blank">{{'Sede_Elect' | translate}}</a>
@@ -59,6 +59,12 @@
   <router-outlet></router-outlet>
 
   <footer class="grid-item">
+    <div class="logo-idi">
+      <a class="nav-link" routerLink=""> 
+        <img width="50" alt="logotipo del IDI" title="logotipo del Instituto de Innovación Empresarial de las Islas Baleares" src="../assets/images/logos/logo-idi.svg">
+      </a>
+    </div>
+
     <div class="localizacion-idi">
       <strong>{{'IdiLine_1' | translate}}</strong><br>
       <strong>{{'IdiLine_2' | translate}}</strong><br>
@@ -72,6 +78,14 @@
       <app-newsletter></app-newsletter>
     </div>
 
+    <div class="social-media">
+      <a href="http://www.facebook.com/IDI.Institutinnovacio" id="red_social" >Facebook</a>
+      <a href="https://www.linkedin.com/company/idi-istitut-innovaci-empresarial-illes-balears/?viewAsMember=true" id="red_social" >LinkedIn</a>
+      <a href="http://twitter.com/IDIbalears" id="red_social" class="twitter">Twitter</a>
+      <a href="http://www.youtube.com/user/InstitutInnovacio?feature=mhee" id="red_social" class="youtube">Youtube</a>
+      <a href="https://www.instagram.com/idi_balears/" id="red_social" class="instagram">Instagram</a>
+    </div>
+
     <div class="textos-legales">
       <div><a class="a_footer" routerLink="/accesibilidad/348">{{'Accesibilidad' | translate}}</a></div>
       <div><a class="a_footer" routerLink="/aviso-legal/350">{{'AvisoLegal' | translate}}</a></div>
@@ -81,22 +95,29 @@
       <div><a class="a_footer" routerLink="/politica-de-privacidad/351">{{'PoliticaPrivacidad' | translate}}</a></div>      
       <!-- <div><a class="a_footer" routerLink="/programas-idi/171">{{'ProgramasIDI' | translate}}</a></div> -->
     </div>
+
+    <div class='logo-feder'>
+      <a *ngIf="currentLang ==='ca-ES'" routerLink="/feder-detail/1523">
+        <img src="../assets/images/logos/logo_FEDER_Balears.jpg" width="100%" title="Fons Europeu de desenvolupament regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
+      </a>
+      
+      <a *ngIf="currentLang ==='es-ES'" routerLink="/feder-detail/1522">
+        <img src="../assets/images/logos/logo_FEDER_Balears.jpg" width="100%" title="Fondo Europeo de desarrollo regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
+      </a>
+    </div>
+    
   </footer>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <section class="grid-item social-media">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <!-- <section class="grid-item social-media">
     <a href="http://www.facebook.com/IDI.Institutinnovacio" id="red_social" class="facebook"><span class="fa fa-facebook"></span></a>
     <a href="https://www.linkedin.com/company/idi-istitut-innovaci-empresarial-illes-balears/?viewAsMember=true" id="red_social" class="linkedin"><span class="fa fa-linkedin"></span></a>
     <a href="http://twitter.com/IDIbalears" id="red_social" class="twitter"><span class="fa fa-twitter"></span></a>
     <a href="http://www.youtube.com/user/InstitutInnovacio?feature=mhee" id="red_social" class="youtube"><span class="fa fa-youtube"></span></a>
     <a href="https://www.instagram.com/idi_balears/" id="red_social" class="instagram"><span class="fa fa-instagram"></span></a>
-  </section>
+  </section> -->
   <!-- <img src="../assets/images/logos/logo_FEDER_Balears.png" width="100%" title="Fondo Europeo de desarrollo regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/> -->
-  <div><app-messages></app-messages></div>
+  
 <!-- </div> -->
-<a *ngIf="currentLang ==='ca-ES'" routerLink="/feder-detail/1523">
-  <img src="../assets/images/logos/logo_FEDER_Balears.png" width="100%" title="Fondo Europeo de desarrollo regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
-</a>
 
-<a *ngIf="currentLang ==='es-ES'" routerLink="/feder-detail/1522">
-  <img src="../assets/images/logos/logo_FEDER_Balears.png" width="100%" title="Fondo Europeo de desarrollo regional" alt="Fondo Europeo de desarrollo regional" class="logoFeder"/>
-</a>
+
+<div><app-messages></app-messages></div>

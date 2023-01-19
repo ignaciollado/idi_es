@@ -6,16 +6,12 @@ import { NoticiaDetailComponent } from './noticia-detail/noticia-detail.componen
 import { FederDetailComponent } from './feder-detail/feder-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-/* import { FeaturedIdiDetailComponent } from './featured-idi-detail/featured-idi-detail.component'; */
 import { HistoryServicesIdiComponent } from './history-services-idi/history-services-idi.component';
 import { ServiceIdiDetailComponent } from './service-idi-detail/service-idi-detail.component';
 import { AyudasSubvencionesIdiDetailComponent } from './ayudas-subvenciones-idi-detail/ayudas-subvenciones-idi-detail.component';
 import { FormacionAgendaIdiComponent } from './formacion-agenda-idi/formacion-agenda-idi.component';
-/* import { FormacionWebinarsIdiComponent } from './formacion-webinars-idi/formacion-webinars-idi.component'; */
 import { MenuHomeIdiComponent } from "./menu-home-idi/menu-home-idi-component";
 import { TransparenciaIdiComponent } from './transparencia-idi/transparencia-idi.component';
-
-/* import { SectoresIdiComponent } from './sectores-idi/sectores-idi.component'; */
 
 import { NoticiasComponent } from './noticias/noticias.component';
 import { ContentIdiComponent } from './content-idi/content-idi.component';
@@ -60,7 +56,8 @@ const routes: Routes = [
 
     { path: 'agenda-events', component: FormacionAgendaIdiComponent },
 
-    { path: 'transparencia/:id', component: TransparenciaIdiComponent },
+    { path: 'idi-transparency/:id', component: TransparenciaIdiComponent },
+    { path: 'idi-transparency-detail/:id', component: TransparencyDetailComponent },
 
     { path: 'accesibilidad/:id', component: MenuFooterIdiComponent },
     { path: 'aviso-legal/:id', component: MenuFooterIdiComponent},

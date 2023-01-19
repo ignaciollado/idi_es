@@ -1,10 +1,16 @@
-<div *ngIf="id!='348' && id!='349' && id!='350' && id!='351'">
-    <img src="../../assets/images/cabeceras/{{cabecera}}" alt="Cabecera {{cabecera}} IDI" title="Cabecera {{cabecera}} IDI">
-</div>
-
-<div  *ngIf="contenidos"> 
-    <div *ngFor="let contenido of contenidos">
-         <div class="transparencia-grid" [innerHTML]='contenido.attributes.text.replaceAll("images/","https://contents.idi.es/images/").replaceAll("<table>","").replaceAll("<tbody>","").replaceAll("</table>","").replaceAll("</tbody>","").replaceAll("https://idi.es/index.php/contenido_texto_nivel3/detalle/","/#/idi-transparency-detail/")'> </div>
+<div class="transparency-container" *ngIf="childCatMatrixHomeIDI"> 
+    <div *ngFor="let childCategory of childCatMatrixHomeIDI">
+        <div class='transparency-item'>
+            <a [routerLink]="['/idi-transparency-detail', childCategory | categoryID]">
+    
+                <figure> 
+                    <img src="../../assets/images/cabeceras/transparencia-recuadro-off.webp" alt="{{childCategory | categoryTitle:currentLang}}" title="{{childCategory | categoryTitle:currentLang}}" /> 
+                    <figcaption id="{{childCategory | categoryID}}" class="main-category-title">{{childCategory | categoryTitle:currentLang}}</figcaption> 
+                </figure>
+    
+            </a>
+        </div>
     </div>
 </div>
-<div *ngIf="!contenidos">Getting contents from {{cabecera.replaceAll('.webp', '').replaceAll('_', ' ')}} ...</div>
+
+<div *ngIf="!childCatMatrixHomeIDI">Getting contents from {{'Transparencia' | translate}} ...</div>

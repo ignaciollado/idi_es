@@ -1,27 +1,30 @@
-<div class="detail-transparency-container" *ngIf="detalleTransparenciaAttribute">
-    <img class="cabecera" src="{{cabecera}}" alt="Cabecera IDI" title="Cabecera IDI" >
-  <div class="card">
-   
-        <div class="card-head" *ngIf="detalleTransparenciaAttribute.images.image_fulltext">
-            <img src={{detalleTransparenciaAttribute.images.image_fulltext}} alt={{detalleTransparenciaAttribute.title}} title={{detalleTransparenciaAttribute.title}}>
+<div class="detail-transparency-container" *ngIf="articles"> 
+  
+        <div *ngFor="let article of articles">
+          
+          <!-- <a [routerLink]="['/idi-detail-news', article.id]"> -->
+            <div class="card">
+              <div>
+                <img class="card-head" src={{article.attributes.images.image_intro}} alt={{article.attributes.title}} title={{article.attributes.title}} />
+              </div>
+              <div class="card-body">
+                <h6 class="card-date">{{article.attributes.publish_up | date: 'dd/MM/yyyy'}}</h6>
+                <h4 class="card-title">{{article.attributes.title}}</h4>
+                <div class='card-text'[innerHTML]="article.attributes.text"></div>
+              </div>
+            </div>
+         <!--  </a> -->
+      
         </div>
-
-        <div class="card-body">
-            <h1 class="card-title">{{detalleTransparenciaAttribute.title}}</h1>
-
-            <h6 class="card-date barra_meta" *ngIf="detalleTransparenciaAttribute.images.image_fulltext">{{detalleTransparenciaAttribute.modified | date: 'dd/MM/yyyy'}}</h6>
-
-            <p [innerHTML]="detalleTransparenciaAttribute.text.replaceAll('images/','https://contents.idi.es/images/') | highlightSearchTerm:searhcTerm"></p>
-        </div>
-
-  </div>
+      
 </div>
+
+
 <small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
-<!--  <hr> -->
       <div class="noticia-tag">
-          <div *ngFor="let item of detalleTransparenciaAttribute.tags | keyvalue">
+         <!--  <div *ngFor="let item of detalleTransparenciaAttribute.tags | keyvalue">
               <a routerLink="/idi-result-list/{{item.value}}">{{item.value}}</a>
-          </div>
+          </div> -->
       </div>
       <hr>
- <div *ngIf="!detalleTransparenciaAttribute"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
+ <div *ngIf="!articles"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>

@@ -4,6 +4,7 @@ import { ArticleService } from '../services/article.service';
 import { MessageService } from '../services/message.service';
 import { Router, ActivatedRoute,  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { Article, reqArticle } from '../model/article.model';
 
 @Component({
   selector: 'app-transparency-detail',
@@ -12,19 +13,21 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class TransparencyDetailComponent implements OnInit {
 
-  public detalleTransparencia: OneArticle
+  public articles: reqArticle[]; 
+  /* public detalleTransparencia: OneArticle */
+  /* public id:number = +this.route.snapshot.paramMap.get('id') */
   public detalleTransparenciaAttribute: attrOneArticle
   public currentLang: string = '';
   public subPath: string = '';
   public cabecera: string = ''
 
-  constructor( public translateService: TranslateService, private getNoticia: ArticleService, private messageNoticia: MessageService, private route: ActivatedRoute,
+  constructor( public translateService: TranslateService, private articleService: ArticleService, 
+    private messageNoticia: MessageService, private route: ActivatedRoute,
     private router: Router ) { }
 
   ngOnInit(): void {
 
-    let id = this.route.snapshot.paramMap.get('id')
-    this.getdetalleTransparencia(id)
+    let id = this.route.snapshot.paramMap.get('id') 
 
     switch (this.translateService.currentLang) {
       case 'cat':
@@ -43,19 +46,26 @@ export class TransparencyDetailComponent implements OnInit {
         this.subPath = this.currentLang+"/"
     }
 
+    this.getdetalleTransparencia( id, this.currentLang )
+
     this.cabecera = `${this.subPath}transparencia_idi.webp`
     this.cabecera = `../../assets/images/cabeceras/${this.cabecera}` 
 
   }
 
-  getdetalleTransparencia (id:string) {
 
-    this.getNoticia.getArticle(id)
+  getdetalleTransparencia( currentCategory: string, currentLanguage:string ) {
 
-      .subscribe( (resp: OneArticle) => {
-        this.detalleTransparenciaAttribute = resp.data.attributes
-      })
+      this.articleService.getArticlesEveryThing()
+          .subscribe( (resp:Article) => {
+           
+            this.articles = resp.data
+            this.articles = this.articles.filter( (item : reqArticle) => item.attributes.state === 1)
+            this.articles = this.articles.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
+            this.articles = this.articles.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
+
+          } ) 
   
-    }
+        }  
 
 }
