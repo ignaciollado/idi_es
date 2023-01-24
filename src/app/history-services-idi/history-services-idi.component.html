@@ -5,13 +5,13 @@
 <div class="tags-container" *ngIf="tagsHistoryIDI"> 
 
     <div class="card" *ngFor="let tag of tagsHistoryIDI">
-
-      <div class="card-block px-6">
-        <h2>{{tag}}</h2>
-        <br>
-        <a routerLink="/idi-result-list/{{tag}}" class="mt-auto btn btn-lg btn-secondary">{{'ViewRelatedContents' | translate}}</a>
-      </div>
-
+      <a routerLink="/idi-result-list/{{tag}}" >
+        <div class="card-block px-6">
+          <h2>{{tag}}</h2>
+          <!-- <br>
+          {{'ViewRelatedContents' | translate}} -->
+        </div>
+      </a>
     </div>
 
 </div>

@@ -21,7 +21,6 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 1.5rem;
     gap: .9rem;
-    border-bottom: 1px solid grey;
 }
 
 .card {

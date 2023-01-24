@@ -2,29 +2,22 @@
   
         <div *ngFor="let article of articles">
           
-          <!-- <a [routerLink]="['/idi-detail-news', article.id]"> -->
             <div class="card">
               <div>
-                <img class="card-head" src={{article.attributes.images.image_intro}} alt={{article.attributes.title}} title={{article.attributes.title}} />
+                <img class="card-head" src={{article.attributes.images.image_fulltext}} alt={{article.attributes.title}} title={{article.attributes.title}} />
               </div>
               <div class="card-body">
                 <h6 class="card-date">{{article.attributes.publish_up | date: 'dd/MM/yyyy'}}</h6>
                 <h4 class="card-title">{{article.attributes.title}}</h4>
-                <div class='card-text'[innerHTML]="article.attributes.text"></div>
+                <div class='card-text'[innerHTML]="article.attributes.text.replaceAll ('images/','https://contents.idi.es/images/')"></div>
               </div>
             </div>
-         <!--  </a> -->
       
         </div>
-      
+        
 </div>
 
 
-<small class="barra_meta">{{'ArchivadoEn' | translate}}</small>
-      <div class="noticia-tag">
-         <!--  <div *ngFor="let item of detalleTransparenciaAttribute.tags | keyvalue">
-              <a routerLink="/idi-result-list/{{item.value}}">{{item.value}}</a>
-          </div> -->
-      </div>
-      <hr>
- <div *ngIf="!articles"><i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}</div>
+ <div *ngIf="!articles">
+    <i class="fa fa-spinner fa-pulse fa-1x fa-fw" style='color: #a2d3da'></i>{{'gettingContentsIDI' | translate}}
+</div>

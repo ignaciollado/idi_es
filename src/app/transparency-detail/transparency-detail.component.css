@@ -1,5 +1,9 @@
-.cabecera{
-    width: 100%;
-    max-width: 1110px;
-    height: auto;
-  }
+img {
+  width: 100%;
+  max-width: 1344px;
+  height: auto;
+}
+
+hr {
+  color: black;
+}

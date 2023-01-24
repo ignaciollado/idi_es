@@ -49,7 +49,7 @@ const routes: Routes = [
 
     { path: 'ayudas-subvenciones', component: AyudasSubvencionesIdiDetailComponent },
 
-    { path: 'idi-list-news/:id', component: NoticiasComponent },
+    { path: 'idi-list-news/:id', title: 'Notícies de l´IDI', component: NoticiasComponent },
     { path: 'idi-detail-news/:id', component: NoticiaDetailComponent },
 
     { path: 'idi-result-list/:searchTerm', component: SearchTheWebResultListComponent},
