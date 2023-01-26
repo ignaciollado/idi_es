@@ -8,7 +8,12 @@
   padding: 0;
 }
 
-.card-title{
+h3 {
+  margin-top: 0;
+  font-size: 1.286rem;
+}
+
+.card-title {
   font-weight: 200;
 }
 
