@@ -10,10 +10,6 @@
   margin-bottom: 2rem;
 }
 
-h2 {
-  font-weight: 200;
-  font-size: 3.43rem;
-}
 
 @media only screen and (max-width: 795px) {
   .who-we-are-container {

@@ -9,7 +9,6 @@
 
 .card__head {
     grid-area: imagen;
-    /* width: 100%; */
 }
 
 .card__body {
@@ -17,15 +16,9 @@
 }
 
 .card__title {
-    font-size: 3.42rem;
+    font-size: 2.471rem;
     font-weight: 200;
 }
-
-/* .card__text {
-    font-size: 2.43rem;
-    font-weight: 200;
-    line-height: 2.75rem;
-} */
 
 .card__text p:first-child > span {
     color: #3e8094;

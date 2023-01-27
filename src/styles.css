@@ -8,14 +8,14 @@
 html {
   max-width: 1344px; /* este ancho viene fijado por el ancho de las imágenes del slider de la home */
   margin: auto;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 200;
   line-height: 1.8rem!important;
 }
 
 body {
   font-family: "Nunito sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"!important;
-  font-size: 18px;
+  font-size: 17px;
   color: rgb(51, 51, 51);
   box-sizing: border-box;
 }
@@ -33,12 +33,12 @@ h1 {
 h2 {
   margin: 0;
   font-weight: 200;
-  font-size: 3.43rem;
+  font-size: 2.471rem;
 }
 
 h3 {
   margin-top: 0;
-  font-size: 1.286rem;
+  font-size: 1.2rem;
   font-weight: 200;
 }
 
@@ -52,8 +52,8 @@ h6{
 
 p {
   margin-bottom: 4rem;
-  font-size: 2.43rem;
-  line-height: 2.72rem;
+  font-size: 1.764rem;
+  line-height: 2.5rem;
 }
 
 p a {
@@ -67,7 +67,8 @@ p a {
 
 .card__body h2 {
   margin-top: 0;
-  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-size: 2.471;
   font-weight: 700;
 }
 
@@ -119,8 +120,8 @@ input:focus, textarea:focus{
 
 .departamento__IDI--nombre, .departamento__IDI--tel, .departamento__IDI--mail {
   font-weight: 200;
-  font-size: 2.43rem;
-  line-height: 2.72rem;
+  font-size: 1.764rem;
+  line-height: 2.5rem;
 }
 
 @media only screen and (max-width: 795px) {

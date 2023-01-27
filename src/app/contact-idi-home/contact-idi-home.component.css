@@ -2,6 +2,9 @@
   text-decoration: underline;
   font-weight: normal;
 }
+h3 {
+  margin-bottom: 2rem;
+}
 
 @media only screen and (max-width: 795px) {
   h2 {

@@ -5,19 +5,19 @@
 
 .main-category-title {
   grid-area: theTitle;
-  font-size: 3.42rem;
-  font-weight: 200;
+  /* font-size: 3.42rem;
+  font-weight: 200; */
 }
 
 .category-articles {
   grid-area: theArticles;
 }
 
-h2 {
+/* h2 {
   margin-top: 4rem!important;
   font-weight: 200;
   font-size: 3.43rem;
-}
+} */
 
 @media only screen and (max-width: 795px) {
   h2 {
