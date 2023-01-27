@@ -19,6 +19,6 @@
     font-size: 1rem;
 }
 input[type=checkbox]{
-  margin-right: 1rem;
-  background: aquamarine;
+  /* margin-right: 1rem; */
+  background: white;
 }

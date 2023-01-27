@@ -1,7 +1,15 @@
-h2 {
+h2, h3 {
   margin-top: 0;
   margin-bottom: 0;
- 
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 3.429rem;
+}
+
+h3 {
+  font-size: 2.429rem;
 }
 
 .projects-banner {
@@ -10,7 +18,10 @@ h2 {
 
 .tags-container {
   display: grid;
+  grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: column;
+  grid-row: auto;
   margin-bottom: 1.5rem;
   gap: .9rem;
 }
@@ -71,10 +82,15 @@ h2 {
   }
 
   h2{
-    font-size: 3rem;
-    text-align: center;
+    font-size: 2.5rem;
+    text-align: left;
   }
+
+  h3 {
+    font-size: 2rem;
+  }
+
   .card-block {
-    text-align: center;
+    text-align: left;
   }
 }  

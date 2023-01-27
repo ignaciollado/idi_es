@@ -27,6 +27,8 @@ body {
 
 p {
   margin-bottom: 4rem;
+  font-size: 2.43rem;
+  line-height: 2.72rem;
 }
 
 .card__body h2 {
@@ -38,6 +40,7 @@ p {
 img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 0.5rem;
 }
 
 .nav-link img {
@@ -85,25 +88,29 @@ p a {
   margin-bottom: 2rem;
 }
 
-.departamento__IDI--nombre {
-  font-weight: bold;
+.departamento__IDI--nombre, .departamento__IDI--tel, .departamento__IDI--mail {
+  font-weight: 200;
+  font-size: 2.43rem;
+  line-height: 2.72rem;
 }
 
-.departamento__IDI--tel {
-  /* margin-left: .5rem; */
-  margin-bottom: .5rem;
-}
 
-.departamento__IDI--mail {
-  /* margin-left: .5rem; */
-  margin-bottom: .5rem;
-}
 
 @media only screen and (max-width: 795px) {
   html{
     padding: .2rem;
     width: 99%;
     background-color: rgb(255, 255, 255);
+  }
+  p {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+
+  .departamento__IDI--nombre, .departamento__IDI--tel, .departamento__IDI--mail {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
 }

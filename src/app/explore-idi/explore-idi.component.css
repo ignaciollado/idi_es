@@ -29,7 +29,7 @@ h3 {
 
 .card-head {
   grid-area: image;
-  margin-bottom: .5rem;
+  /* margin-bottom: .5rem; */
   /* max-width: 262px; */ /* se lo tengo que poner porque las imágenes que usan son de 268px */
 }
 

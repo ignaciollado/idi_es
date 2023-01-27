@@ -91,11 +91,11 @@
       <div class="form-group"><i *ngIf="spinner" class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
 
         <div class="btn-group" role="group" aria-label="Submit contact form">
-          <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">{{'send' | translate}}</button>
+          <button type="submit" class="btn btn-outline-primary btn-lg" [disabled]="!contactForm.valid">{{'send' | translate}}</button>
           <button
             type="button"
             (click)="onReset()"
-            class="btn btn-secondary float-right"
+            class="btn btn-secondary btn-lg"
           ><i class="fa fa-trash-o fa-lg"></i>
             Reset
           </button>

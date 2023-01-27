@@ -99,7 +99,7 @@ footer {
   grid-template-columns: 1fr 1.25fr 1.5fr 1fr 1fr;
   grid-template-areas:  'logoIDI localizacionIDI newsLetterIDI redesSocialesIDI textosLegalesIDI'
                         'cuadroVacioIzq logoFederIzq logoFeder logoFederdcha cuadroVacioDcha';
-  color: #000000;
+  
   margin-bottom: 1.5rem;
 }
 
@@ -180,7 +180,6 @@ footer {
 }
 
 .social-media a{
-  /* padding-left: .5rem; */
   padding-right: .5rem;
   opacity: 1.0;
 }
@@ -202,16 +201,21 @@ footer {
     } 
   footer {
     grid-template-columns: 1fr; 
-    grid-template-areas: 'logoIDI logoIDI' 'localizacionIDI localizacionIDI' 'newsLetterIDI newsLetterIDI' 'redesSocialesIDI textosLegalesIDI' 'logoFeder logoFeder';
+    grid-template-areas: 'logoIDI logoIDI logoIDI' 'localizacionIDI localizacionIDI localizacionIDI' 'newsLetterIDI newsLetterIDI newsLetterIDI' 'redesSocialesIDI textosLegalesIDI textosLegalesIDI' 'logoFederIzq logoFeder logoFederdcha';
     font-size: 1.4rem;
     }
     .news-letter {
       padding-left: 1rem;
-      padding-right: 1rem;
+      padding-right: 0;
+      font-size: 1rem;
 
     }
     .social-media {
       padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .textos-legales { 
+      padding-left: 4rem;
     }
 }
 

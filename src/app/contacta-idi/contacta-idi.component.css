@@ -17,7 +17,7 @@ input:checked {
 
 input[type=checkbox]{
   margin-right: 1rem;
-  background: aquamarine;
+  background: white;
 }
 
 form{
@@ -39,6 +39,7 @@ form{
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-radius: 0;
+  box-shadow: none;
   -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
@@ -64,7 +65,7 @@ form{
 }
 
 .submitted-data{
-    border: #00ff00 1px solid;
+  /*   border: #00ff00 1px solid; */
     padding: .5rem;
 }
 
