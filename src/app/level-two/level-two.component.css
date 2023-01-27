@@ -10,14 +10,14 @@ img {
                         'title texto';
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  font-weight: 200!important;
+  /* font-weight: 200!important; */
 }
 
-h1, h2 {
+/*  h1, h2 {
   margin-top: 0;
   font-size: 3.43rem;
   font-weight: 200!important;
-}
+} */
 
 .projects-banner {
   margin-bottom: 0;
@@ -31,21 +31,17 @@ h1, h2 {
 
 .card__head {
   grid-area: image;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 
 .card__title {
   grid-area: title;
-  font-weight: 200!important;
+  /* font-weight: 200!important; */
   padding-right: 2rem;
 }
 
 .card__body {
   grid-area: texto;
-  padding-right: 4rem;
-  line-height: 2.73rem;
-  font-size: 2.43rem;
-  color:#7e7e7c;
 }
 
 .noticia__tag{

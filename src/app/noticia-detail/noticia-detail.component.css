@@ -1,19 +1,19 @@
 .card {
     display: grid;
-    grid-template-areas:    'image title'
-                            'image texto';
+    grid-template-areas:    'imagen cuerpo'
+                            'imagen cuerpo';
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+    column-gap: 2rem;
 }
 
 .card__head {
-    grid-area: image;
-    max-width: 100%;
+    grid-area: imagen;
+    /* width: 100%; */
 }
 
 .card__body {
-    grid-area: title;
-    padding-left: 2rem;
+    grid-area: cuerpo;
 }
 
 .card__title {
@@ -21,16 +21,11 @@
     font-weight: 200;
 }
 
-.card__text {
+/* .card__text {
     font-size: 2.43rem;
     font-weight: 200;
     line-height: 2.75rem;
-}
-
-.card__footer {
-    grid-area: texto;
-    padding-left: 2rem;
-}
+} */
 
 .card__text p:first-child > span {
     color: #3e8094;
@@ -84,9 +79,9 @@ h1 {
     margin-bottom: 2rem!important;
 }
 
-img {
+/* img {
     width: 100%;
-}
+} */
 
 @media only screen and (max-width: 795px) {
     .detail-news-container img {
@@ -94,20 +89,15 @@ img {
         height: auto;
     }
     .card {
-        grid-template-areas:    'image' 
-                                'title'
-                                'texto';
+        grid-template-areas:    'imagen' 
+                                'cuerpo'
+                                ;
     }
-    .card__body {
-        padding-left: 0;
+    
+    .card__title {
+        font-size: 2.25rem;
     }
-    .card__head{
-        margin-bottom: 2rem;
-    }
-    .card__head > img {
-        width: 100%;
-        height: auto;
-    }
+
     .card__footer {
         padding-left: 0;
     }

@@ -5,7 +5,7 @@
   gap: .9rem;
 }
 
-h2 {
+/* h2 {
   margin: 0;
   font-weight: 200;
   font-size: 3.43rem;
@@ -15,7 +15,7 @@ h3 {
   margin-top: 0;
   font-size: 1.286rem;
   font-weight: 200;
-}
+} */
 
 .projects-banner {
   margin-bottom: 1rem;
@@ -46,8 +46,6 @@ h3 {
 
 .card-body {
   grid-area: title;
-  min-height: 12rem;
-  max-height: 12rem;
   line-height: 1.4285em;
   padding: 0;
 }  
@@ -57,13 +55,13 @@ h3 {
   font-weight: 800;
 }
 
-h4{
+/* h4{
   margin-right: .5rem;
 }
 
 h6{
   font-weight: 800;
-}
+} */
 
 .card a:hover {
   opacity: .8;

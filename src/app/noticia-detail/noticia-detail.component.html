@@ -3,19 +3,16 @@
         
         <div class="card">
             
-            <div *ngIf="unaNoticiaAttribute.images.image_fulltext">
-                <img class="card__head" src={{unaNoticiaAttribute.images.image_fulltext}} alt={{unaNoticiaAttribute.title}} title={{unaNoticiaAttribute.title}}>
+            <div class="card__head" *ngIf="unaNoticiaAttribute.images.image_fulltext">
+                <img src={{unaNoticiaAttribute.images.image_fulltext}} alt={{unaNoticiaAttribute.title}} title={{unaNoticiaAttribute.title}}>
             </div>
 
             <div class="card__body">
                 <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
-                <h6 class="card__date barra_meta" *ngIf="unaNoticiaAttribute.images.image_fulltext">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h6>
+                <h4 class="card__date barra_meta" *ngIf="unaNoticiaAttribute.images.image_fulltext">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h4>
             
                 <div class="card__text" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/') | highlightSearchTerm:searhcTerm"></div>            
                 
-                <!-- <div class="card__footer">
-               
-                </div> -->
             </div>
 
         </div>

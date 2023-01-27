@@ -41,7 +41,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  min-height: 50px;
+  min-height: 3rem;
   margin-bottom: 1.5rem;
   border: 1px solid transparent;
 }
@@ -54,7 +54,7 @@ footer {
   background-color: #f8f9fa;
 }
 .search-the-web{
-  font-size: 1rem;
+  /* font-size: 1rem; */
   text-align: center;
   margin-left: 30px;
   margin-top: 4px;
@@ -80,13 +80,19 @@ footer {
 
 h1 {
 	text-align: center;
-	margin: 40px 0 40px;
+	margin: 2rem 0 2rem;
 	text-align: center;
-	font-size: 30px;
+	font-size: 1rem;
 	color: #ecf0f1;
 	text-shadow: 2px 2px 4px #000000;
 	font-family: 'Cherry Swash', cursive;
 }
+
+.dropdown-menu > li > a {
+  font-weight: 200;
+  font-size: 1rem;
+}
+
 /* Clear floats after the columns */
 section::after {
   content: "";

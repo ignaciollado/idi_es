@@ -8,13 +8,14 @@
 html {
   max-width: 1344px; /* este ancho viene fijado por el ancho de las imágenes del slider de la home */
   margin: auto;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 200;
   line-height: 1.8rem!important;
 }
 
 body {
   font-family: "Nunito sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"!important;
+  font-size: 18px;
   color: rgb(51, 51, 51);
   box-sizing: border-box;
 }
@@ -25,10 +26,43 @@ body {
   border: #000 1px solid;
 }
 
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 200;
+  font-size: 3.43rem;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.286rem;
+  font-weight: 200;
+}
+
+h4{
+  margin-right: .5rem;
+}
+
+h6{
+  font-weight: 800;
+}
+
 p {
   margin-bottom: 4rem;
   font-size: 2.43rem;
   line-height: 2.72rem;
+}
+
+p a {
+  text-decoration:  underline solid #34a39e 10%!important;
+  text-underline-offset: 10px;
+}
+
+.card {
+  font-weight: 200;
 }
 
 .card__body h2 {
@@ -75,11 +109,6 @@ input:focus, textarea:focus{
   color:black;
 }
 
-p a {
-  text-decoration:  underline solid #34a39e 10%!important;
-  text-underline-offset: 10px;
-}
-
 .card {
   border: none;
 }
@@ -94,8 +123,6 @@ p a {
   line-height: 2.72rem;
 }
 
-
-
 @media only screen and (max-width: 795px) {
   html{
     padding: .2rem;
@@ -104,7 +131,7 @@ p a {
   }
   p {
     margin-bottom: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 2.3rem;
   }
 
