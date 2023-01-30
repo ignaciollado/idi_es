@@ -5,16 +5,6 @@
   gap: 1rem;
 }
 
-/* h2 {
-  font-weight: 200;
-  font-size: 2.471rem;
-} */
-
-/* h3 {
-  margin-top: 0;
-  font-size: 1.286rem;
-} */
-
 .alert {
   min-width: 100%;
   border: 1px solid black
@@ -29,8 +19,6 @@
 
 .card-head {
   grid-area: image;
-  /* margin-bottom: .5rem; */
-  /* max-width: 262px; */ /* se lo tengo que poner porque las imágenes que usan son de 268px */
 }
 
 .card-body {
@@ -43,9 +31,9 @@
 }
 
 @media only screen and (max-width: 795px) {
-  h2 {
+  /* h2 {
     font-size: 1.8rem;
-  }
+  } */
   .explore-idi-container {
   
     grid-template-columns: repeat(1, 1fr);
