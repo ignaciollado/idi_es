@@ -7,11 +7,30 @@
         <div class="card-body">
             <h1 class="card-title">{{unContenidoAttribute.title}}</h1>
             <h6 class="card-date">{{unContenidoAttribute.created | date: 'dd/MM/yyyy'}}</h6>
-            <div [innerHTML]="unContenidoAttribute.text.replaceAll('images/','https://contents.idi.es/images/').replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/').replaceAll('https://idi.es/index.php/agenda_ctrl/reposit','#/formacion-webinars').replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/').replaceAll('https://idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/').replaceAll('https://www.idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/').replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/')"></div>
+            <div [innerHTML]="unContenidoAttribute.text
+                                  .replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/')
+                                  .replaceAll('https://idi.es/index.php/agenda_ctrl/reposit','#/formacion-webinars')
+                                  .replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/')
+                                  .replaceAll('https://idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/')
+                                  .replaceAll('https://www.idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/')
+                                  .replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/')
+                                  .replaceAll('http://idi.es/index.php/inscripcion_agenda/obtiene_subvencion/','http://utils.idi.es/index.php/inscripcion_agenda/obtiene_subvencion/')
+                                  .replaceAll('http://idi.es/index.php/inscripcion_agenda/obtiene_evento/','http://utils.idi.es/index.php/inscripcion_agenda/obtiene_evento/')
+
+                                  "></div>
         </div>
   </div>
   <ng-template #simpleShow>
-    <div class="detail-text" [innerHTML]="unContenidoAttribute.text.replaceAll('images/','https://contents.idi.es/images/').replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/').replaceAll('https://idi.es/index.php/agenda_ctrl/reposit','#/formacion-webinars').replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/').replaceAll('https://idi.es/index.php/sectores_contenido_texto/detalle_sectores/','/sectors-idi-hlp-detail/').replaceAll('https://www.idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/').replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/')"></div>
+    <div class="detail-text" [innerHTML]="unContenidoAttribute.text.replaceAll('images/','https://contents.idi.es/images/')
+    .replaceAll('https://idi.es/index.php/contenido_busca_web_nivel3/detalle/','#/idi-detail/')
+    .replaceAll('https://idi.es/index.php/agenda_ctrl/reposit','#/formacion-webinars')
+    .replaceAll('http://www.idi.es/index.php/sectores_contenido_texto/detalle_sectores/','#/sectors-idi-hlp-detail/')
+    .replaceAll('https://idi.es/index.php/sectores_contenido_texto/detalle_sectores/','/sectors-idi-hlp-detail/')
+    .replaceAll('https://www.idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/')
+    .replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/emprendedor-empresa-idi-detail/')
+    .replaceAll('http://idi.es/index.php/inscripcion_agenda/obtiene_subvencion/','http://utils.idi.es/index.php/inscripcion_agenda/obtiene_subvencion/')
+    .replaceAll('http://idi.es/index.php/inscripcion_agenda/obtiene_evento/','http://utils.idi.es/index.php/inscripcion_agenda/obtiene_evento/')
+    "></div>
   </ng-template>
 
 </div>
