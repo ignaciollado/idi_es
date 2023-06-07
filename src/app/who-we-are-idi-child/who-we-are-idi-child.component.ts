@@ -30,7 +30,7 @@ export class WhoWeAreIdiChildComponent implements OnInit {
     private router: Router ) { }
 
   ngOnInit(): void {
-
+    console.log (this.childCategory)
     switch (this.translateService.currentLang) {
       case 'cat':
         this.currentLang = 'ca-ES'
@@ -78,6 +78,7 @@ export class WhoWeAreIdiChildComponent implements OnInit {
     this.articleService.getArticles() /* Para cada categoría nieta, buscar todos los artículos asociados */
         .subscribe( (resp:Article) => {
           this.articulos = resp.data
+          console.log (this.articulos)
           this.articulos = this.articulos.filter( (item : reqArticle) => item.attributes.state === 1) /* Todos los artículos publicados */
           this.articulos = this.articulos.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) /* Todos los artículos en el idioma de la web */
           this.articulos = this.articulos.filter( (item : reqArticle) => childChildCategories.includes( item.relationships.category.data.id ) ) /* Todos los artículos cuya categoría está en el array */

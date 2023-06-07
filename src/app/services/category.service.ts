@@ -11,7 +11,7 @@ export class CategoryService {
 
   private jToken = 'c2hhMjU2OjkwNzpjZjRkMmYwOTkxMGYyZTFiMWY2NGFjYThjZWVjM2VlNmI4ZGRlNGU1OTBjNzNiODA0NzM2NDdhYjUwN2M4NTdm'
   private apiBaseUrlOne = 'https://contents.idi.es/api/index.php/v1/content/categories'
-  private apiBaseUrl = 'https://contents.idi.es/api/index.php/v1/content/categories?page[offset]=0&page[limit]=250' /* Chapuza para mostrar todo ya que no veo como pasar query parameters */
+  private apiBaseUrl = 'https://contents.idi.es/api/index.php/v1/content/categories?page[offset]=0&page[limit]=210' /* Chapuza para mostrar todo ya que no veo como pasar query parameters */
 
   headers = new HttpHeaders()
     .set( 'Content-Type', 'application/vnd.api+json' ) 

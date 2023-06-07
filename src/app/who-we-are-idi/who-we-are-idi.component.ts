@@ -50,17 +50,16 @@ export class WhoWeAreIdiComponent implements OnInit {
       .subscribe( ( categorias:Category ) => {
 
           this.categorias = categorias.data
-          this.categorias = this.categorias.filter( ( item : reqCategory ) => item.attributes.published === 1 )
+          this.categorias = this.categorias.filter( ( item : reqCategory ) => { item.attributes.published === 1 } )
+
           //this.categorias = this.categorias.filter( ( item : reqCategory ) => item.id != '369' ) /* quito la cat 'Projectes IDI' */
           //this.categorias = this.categorias.sort( (x:reqCategory, y:reqCategory) => (x.attributes.title > y.attributes.title) ? -1 : 1 )
 
-          this.categorias.map ( item => {
+          categorias.data.map( item => {
 
-            if ( item.attributes.parent_id.toString() === `${parentCategory}` ) {
-
-              this.childCatMatrixHomeIDI.push(`${item.attributes.id.toString()}#${item.attributes.title}#${item.attributes.note}`) /* Si es cat el nombre esta en 'title', si es esp el nombre está en 'note' */
-
-            }
+          if ( item.attributes.parent_id.toString() === `${parentCategory}` ) {
+            this.childCatMatrixHomeIDI.push(`${item.attributes.id.toString()}#${item.attributes.title}#${item.attributes.note}`) /* Si es cat el nombre esta en 'title', si es esp el nombre está en 'note' */
+          }
          
           })
 
@@ -71,9 +70,7 @@ export class WhoWeAreIdiComponent implements OnInit {
   getCategoryDetail( catID: string ) {
     this.categoryService.getCategory(catID)
       .subscribe( (category:OneCategory) => {
-
-        this.rootCategoryDetails = category
-        /* console.log (`Category details: ${this.rootCategoryDetails}`) */
+        this.rootCategoryDetails = category /* de aquí obtendré la imagen de cabecera de la página 'Qui som' */
       })
   }
 
