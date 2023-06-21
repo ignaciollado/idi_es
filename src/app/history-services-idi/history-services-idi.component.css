@@ -5,11 +5,12 @@ h2, h3 {
 }
 
 h2 {
-  font-size: 3.429rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .projects-banner {

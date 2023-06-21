@@ -102,7 +102,7 @@ a:link:active, a:visited:active {
 }
 
 iframe {
-    min-height: 5rem;
+    min-height: 8rem;
     width: 100%;
 }
 

@@ -46,6 +46,10 @@ footer {
   border: 1px solid transparent;
 }
 
+.navbar-nav {
+  padding-left: 1rem;
+}
+
 .offcanvas-body {
   height: 100%;
 }

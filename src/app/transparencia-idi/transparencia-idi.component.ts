@@ -23,9 +23,11 @@ export class TransparenciaIdiComponent implements OnInit {
   public categorias: reqCategory[]
   cabecera: string;
   
-  constructor( public translateService: TranslateService, private articleService: ArticleService, 
+  constructor( public translateService: TranslateService, 
+    private articleService: ArticleService, 
     private categoryService: CategoryService,
-    private messageService: MessageService, private route: ActivatedRoute ) { }
+    private messageService: MessageService, 
+    private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
 
