@@ -21,10 +21,12 @@ export class LevelOneComponent implements OnInit {
 
   public unaCategoria: string
   public currentLang: string
+  public totalProjectsInCategory: number /* If there is only one projecto go to level two directly */
 
   constructor(  public translateService: TranslateService, private getContent: ArticleService, 
     private getCategory: CategoryService,
-    private messageNoticia: MessageService, private route: ActivatedRoute,
+    private messageNoticia: MessageService, 
+    private route: ActivatedRoute,
     private router: Router ) { }
 
   ngOnInit(): void {
@@ -64,7 +66,12 @@ export class LevelOneComponent implements OnInit {
           this.contents = this.contents.filter( (item : reqArticle) => item.attributes.state === 1)
           this.contents = this.contents.filter( (item : reqArticle) => item.attributes.language === `${currentLanguage}`) 
           this.contents = this.contents.filter( (item : reqArticle) => item.relationships.category.data.id === `${currentCategory}`)
+          this.totalProjectsInCategory = this.contents.length
 
+          /* if there is only one project in this service goto level two directly */
+          if (this.totalProjectsInCategory === 1) {
+            this.router.navigateByUrl(`idi-level-two/${this.contents[0].id}/${this.contents[0].relationships.category.data.id}`);
+          }
         })
       
   }
