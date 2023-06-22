@@ -1,4 +1,4 @@
-
+{{categoria.length}}
 <div class='article-container' *ngIf="categoria">
   <div  *ngFor="let item of categoria">
    
@@ -15,13 +15,13 @@
       
         <div *ngIf="currentLang === 'ca-ES'" class="card">
           <a  [routerLink]="['/idi-level-one', item.data.id, childCategory]">
-          <div>
-            <img width="100%" height="auto" class="card-head" src="https://contents.idi.es/{{item.data.attributes.params.image}}" alt={{item.data.attributes.title}} title={{item.data.attributes.title}} />
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">{{item.data.attributes.title}}</h4>
-          </div>
-        </a>
+            <div>
+              <img width="100%" height="auto" class="card-head" src="https://contents.idi.es/{{item.data.attributes.params.image}}" alt={{item.data.attributes.title}} title={{item.data.attributes.title}} />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{item.data.attributes.title}}</h4>
+            </div>
+          </a>
         </div>
 
   </div>
