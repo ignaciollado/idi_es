@@ -26,7 +26,7 @@ h3 {
 
 .card {
   display: grid;
-  grid-template-areas:  'image' 
+  grid-template-areas:  'image'
                         'title'
                         'fecha';
   width: 100%;
@@ -52,12 +52,13 @@ h3 {
   .tags-container {
     grid-template-rows: repeat(1001, 1fr);
     grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1000, 1fr);
     gap: 0;
   }
 
   .card {
-    grid-template-areas: 'image' 'title'
-                         'fecha';
+    grid-template-areas: 'image' 'title' 'fecha';
+    margin-bottom: 0;
   }
 
   .card-body {
@@ -70,7 +71,7 @@ h3 {
   .card-body:hover {
     border-left: none;
     padding-bottom: 3rem;
-  } 
+  }
 
   .card-date {
     margin-left: 0;
@@ -81,8 +82,9 @@ h3 {
   }
 
   h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: left;
+    font-weight: bolder;
   }
 
   h3 {
@@ -91,5 +93,5 @@ h3 {
 
   .card-block {
     text-align: left;
-  }
-}  
+}
+}
