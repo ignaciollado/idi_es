@@ -125,6 +125,14 @@ input:focus, textarea:focus{
   line-height: 2.5rem;
 }
 
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 1rem;
+}
+
 @media only screen and (max-width: 795px) {
   html {
     padding: .2rem;
