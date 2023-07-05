@@ -7,7 +7,7 @@
                 <img class="card-head" src={{article.attributes.images.image_fulltext}} alt={{article.attributes.title}} title={{article.attributes.title}} />
               </div>
               <div class="card-body">
-                <h6 class="card-date">{{article.attributes.publish_up | date: 'dd/MM/yyyy'}}</h6>
+                <!-- <h6 class="card-date">{{article.attributes.publish_up | date: 'dd/MM/yyyy'}}</h6> -->
                 <h4 class="card-title">{{article.attributes.title}}</h4>
                 <div class='card-text'[innerHTML]="article.attributes.text.replaceAll ('images/','https://contents.idi.es/images/')"></div>
               </div>
