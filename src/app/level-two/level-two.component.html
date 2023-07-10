@@ -19,7 +19,7 @@
       <h2 class="card__title">{{oneContentAttributes.title}}</h2>
     </div>
 
-    <div class="card__body" [innerHTML]="oneContentAttributes.text | wellFormattedLink">
+    <div class="card__body" [innerHTML]="oneContentAttributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink">
     </div>
 
   </div>
