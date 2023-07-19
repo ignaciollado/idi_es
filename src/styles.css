@@ -83,6 +83,11 @@ img {
   width: 74px;
 }
 
+.navbar-nav>li {
+  float: left;
+  padding-right: 1.5rem;
+}
+
 a {
   color: rgba(0, 0, 0, 1)!important;
 }
