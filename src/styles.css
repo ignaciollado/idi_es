@@ -52,14 +52,14 @@ h6 {
 }
 
 p {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   font-size: 1.764rem;
   line-height: 2.5rem;
 }
 
 p a {
-  text-decoration:  underline solid #34a39e 10%!important;
-  text-underline-offset: 10px;
+  text-decoration:  underline solid #669591 2px !important;
+  text-underline-offset: 4px;
 }
 
 .card {
