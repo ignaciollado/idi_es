@@ -58,6 +58,7 @@ import { WellFormattedLinkPipe } from './utils/well-formatted-link.pipe';
 import { HistoryServicesIdiComponent } from './history-services-idi/history-services-idi.component';
 import { ProyectosIdiChildComponent } from './proyectos-idi-child/proyectos-idi-child.component';
 import { LevelTwoComponent } from './level-two/level-two.component';
+import { GetAliasPipe } from './Pipes/get-alias.pipe';
 
 
 @NgModule({
@@ -107,7 +108,8 @@ import { LevelTwoComponent } from './level-two/level-two.component';
     WellFormattedLinkPipe,
     HistoryServicesIdiComponent,
     ProyectosIdiChildComponent,
-    LevelTwoComponent
+    LevelTwoComponent,
+    GetAliasPipe
   ],
   imports: [
     BrowserModule,

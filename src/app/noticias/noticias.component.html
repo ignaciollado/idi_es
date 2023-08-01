@@ -3,7 +3,7 @@
   
   <div *ngFor="let noticia of noticias">
     
-    <a [routerLink]="['/idi-detail-news', noticia.id]">
+    <a [routerLink]="['/idi-detail-news', noticia.attributes.alias, noticia.id]">
       <div class="card">
         <div>
           <img class="card-head" src={{noticia.attributes.images.image_intro}} alt={{noticia.attributes.title}} title={{noticia.attributes.title}} />

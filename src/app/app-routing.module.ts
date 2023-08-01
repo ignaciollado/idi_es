@@ -32,8 +32,8 @@ const routes: Routes = [
     { path: 'idi-who-we-are/:id', title: 'Qui som', component: WhoWeAreIdiComponent },
     { path: 'idi-history-services', title: 'Històric serveis IDI', component: HistoryServicesIdiComponent},
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
-    { path: 'idi-level-two/:id/:idMainCat', component: LevelTwoComponent },
-    { path: 'idi-level-one/:idSubCat/:idMainCat', component:LevelOneComponent},
+    { path: 'idi-level-two/:alias/:id/:idMainCat', component: LevelTwoComponent },
+    { path: 'idi-level-one/:alias/:idSubCat/:idMainCat', component:LevelOneComponent},
     { path: 'feder-detail/:id', component: FederDetailComponent },
 
     { path: 'idi-transparency-detail/:id', component: TransparencyDetailComponent },
@@ -50,14 +50,14 @@ const routes: Routes = [
     { path: 'ayudas-subvenciones', component: AyudasSubvencionesIdiDetailComponent },
 
     { path: 'idi-list-news/:id', title: 'Notícies de l´IDI', component: NoticiasComponent },
-    { path: 'idi-detail-news/:id', component: NoticiaDetailComponent },
+    { path: 'idi-detail-news/:alias/:id', component: NoticiaDetailComponent },
 
     { path: 'idi-result-list/:searchTerm', component: SearchTheWebResultListComponent},
 
     { path: 'agenda-events', component: FormacionAgendaIdiComponent },
 
     { path: 'idi-transparency/:id', component: TransparenciaIdiComponent },
-    { path: 'idi-transparency-detail/:id', component: TransparencyDetailComponent },
+    { path: 'idi-transparency-detail/:alias/:id', component: TransparencyDetailComponent },
 
     { path: 'accesibilidad/:id', component: MenuFooterIdiComponent },
     { path: 'aviso-legal/:id', component: MenuFooterIdiComponent},

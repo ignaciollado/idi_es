@@ -20,6 +20,7 @@ export class NoticiaDetailComponent implements OnInit {
   ngOnInit(): void {
 
     let id = this.route.snapshot.paramMap.get('id')
+    console.log (id)
     this.getUnaNotica(id)
 
     window.scroll(0,0)

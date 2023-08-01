@@ -70,7 +70,7 @@ export class LevelOneComponent implements OnInit {
 
           /* if there is only one project in this service goto level two directly */
           if (this.totalProjectsInCategory === 1) {
-            this.router.navigateByUrl(`idi-level-two/${this.contents[0].id}/${this.contents[0].relationships.category.data.id}`);
+            this.router.navigateByUrl(`idi-level-two/${this.contents[0].attributes.alias}/${this.contents[0].id}/${this.contents[0].relationships.category.data.id}`);
           }
         })
       
