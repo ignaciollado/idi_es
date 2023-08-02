@@ -32,8 +32,14 @@ const routes: Routes = [
     { path: 'idi-who-we-are/:id', title: 'Qui som', component: WhoWeAreIdiComponent },
     { path: 'idi-history-services', title: 'Històric serveis IDI', component: HistoryServicesIdiComponent},
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
-    { path: 'idi-level-two/:alias/:id/:idMainCat', component: LevelTwoComponent },
-    { path: 'idi-level-one/:alias/:idSubCat/:idMainCat', component:LevelOneComponent},
+    /* { path: 'idi-level-two/:alias/:id/:idMainCat', component: LevelTwoComponent }, */
+    { path: 'detalle-proyecto-idi/:alias/:id/:idMainCat', component: LevelTwoComponent },
+    { path: 'detall-projecte-idi/:alias/:id/:idMainCat', component: LevelTwoComponent },
+
+   /*  { path: 'idi-level-one/:alias/:idSubCat/:idMainCat', component:LevelOneComponent}, */
+    { path: 'proyecto-idi/:alias/:idSubCat/:idMainCat', component:LevelOneComponent},
+    { path: 'projecte-idi/:alias/:idSubCat/:idMainCat', component:LevelOneComponent},
+
     { path: 'feder-detail/:id', component: FederDetailComponent },
 
     { path: 'idi-transparency-detail/:id', component: TransparencyDetailComponent },

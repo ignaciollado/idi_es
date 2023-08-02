@@ -62,7 +62,7 @@ export class MatrixIdiHomeChildComponent implements OnInit {
         this.childChildCategory = this.childChildCategory.sort( (x:reqCategory, y:reqCategory)=> (x.attributes.title > y.attributes.title) ? 1 : -1 ) 
         this.childChildCategory.map ( item => {
 
-          if ( item.attributes.parent_id.toString() === `${childCategory}`) {
+          if ( item.attributes.parent_id.toString() === `${childCategory}` ) {
 
             this.childChildCatMatrixHomeIDI.push(item.attributes.id.toString())
 
