@@ -61,7 +61,6 @@ import { GetAliasPipe } from './Pipes/get-alias.pipe';
 import { TranslateModule } from "@ngx-translate/core";
 import { ModalComponent } from './modal/modal.component';
 
-
 @NgModule({
     declarations: [
         AppComponent,
