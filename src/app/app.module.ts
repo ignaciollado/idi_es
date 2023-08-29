@@ -59,6 +59,7 @@ import { ProyectosIdiChildComponent } from './proyectos-idi-child/proyectos-idi-
 import { LevelTwoComponent } from './level-two/level-two.component';
 import { GetAliasPipe } from './Pipes/get-alias.pipe';
 import { TranslateModule } from "@ngx-translate/core";
+import { ModalComponent } from './modal/modal.component';
 
 
 @NgModule({
@@ -103,7 +104,8 @@ import { TranslateModule } from "@ngx-translate/core";
         HistoryServicesIdiComponent,
         ProyectosIdiChildComponent,
         LevelTwoComponent,
-        GetAliasPipe
+        GetAliasPipe,
+        ModalComponent
     ],
     providers: [{ provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true }],
     bootstrap: [AppComponent],

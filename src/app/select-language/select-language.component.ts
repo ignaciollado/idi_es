@@ -4,15 +4,10 @@ import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-select-language',
-  template: `
-  <select #langSelect (change)=" switchLanguage(langSelect.value) " title='Please select your preferred language'>
-    <option
-      *ngFor="let lang of translate.getLangs()"
-      [value]="lang"
-      [attr.selected]="lang === translate.currentLang ? '' : null"
-    >{{lang}}</option>
-  </select>
-`,
+  template: ` <div class="btn-group" role="group" aria-label="Please, select your preferred language">
+                    <button type="button" class="btn btn-secondary" #langSelect (click)="switchLanguage('cat')">CAT</button>
+                    <button type="button" class="btn btn-secondary" #langSelect (click)="switchLanguage('cas')">CAS</button>
+              </div>`,
   styles: [`
     select:hover, option:hover {
       cursor: pointer;

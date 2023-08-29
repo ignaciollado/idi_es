@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-/* import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from 'ngx-translate-cache'; */
 
 @NgModule({
   imports: [
@@ -21,7 +20,7 @@ export class I18nModule {
   constructor(translate: TranslateService) {
 
     translate.addLangs(['cat', 'cas']) /* Indica que lenguas hay disponibles para la traducción */
-    translate.setDefaultLang('cat') /* Lengua por defecto cuando no se encuentre un JSON de traducción */
+   //translate.setDefaultLang('cat') /* Lengua por defecto cuando no se encuentre un JSON de traducción */
     const browserLang = translate.getBrowserLang()
 
     if (localStorage.getItem('preferredLang')===null) {
