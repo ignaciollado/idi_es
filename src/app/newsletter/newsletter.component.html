@@ -22,14 +22,14 @@
             formControlName="acceptTerms"
             class="form-check-input" aria-label="accept Terms"/>
   
-          <label for="acceptTerms" class="form-check-label"><a class="a_footer" routerLink="/politica-de-privacidad/351">{{'acceptTerms' | translate}}</a></label>
+          <label for="acceptTerms" class="form-check-label"><a class="a_footer" aria-label="política de privacidad" routerLink="/politica-de-privacidad/351">{{'acceptTerms' | translate}}</a></label>
           <div *ngIf="(acceptTerms.invalid && acceptTerms.touched) || acceptTerms.dirty">
             <small *ngIf="acceptTerms.errors?.['required']" class="is-invalid-lbl">{{'acceptTerms' | translate}} <strong>{{'isRequired' | translate}}</strong></small>
           </div>
         </div>
   
         <div class="form-group">
-          <button type="submit" class="btn btn-outline-primary btn-lg" [disabled]="!newsLetterForm.valid">{{'send' | translate}}</button>
+          <button aria-label="Submit" type="submit" class="btn btn-outline-primary btn-lg" [disabled]="!newsLetterForm.valid">{{'send' | translate}}</button>
         </div>
       </form>
     </div>

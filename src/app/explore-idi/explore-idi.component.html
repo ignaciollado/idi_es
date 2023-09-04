@@ -1,5 +1,5 @@
 
-<h2>{{'ExploraIDI' | translate}}</h2>
+<h1>{{'ExploraIDI' | translate}}</h1>
 
 <div class="alert alert-info" role="alert"  *ngIf="!categoria">
   <h3>{{'gettingContentsIDI' | translate}}</h3>
@@ -13,10 +13,10 @@
       <div *ngIf="currentLang === 'es-ES'">
         <div class="card">
           <div>
-            <img width="763" height="429" class="card-head" src="https://contents.idi.es/{{item.data.attributes.params.image}}" alt={{item.data.attributes.note}} title={{item.data.attributes.note}} />
+            <img width="763" height="429" class="card-head" src="https://contents.idi.es/{{item.data.attributes.params.image}}"  title={{item.data.attributes.note}} />
           </div> 
           <div class="card-body">
-            <h3 class="card-title">{{item.data.attributes.note}}</h3>
+            <h2 class="card-title">{{item.data.attributes.note}}</h2>
           </div>
         </div>
       </div>
@@ -24,10 +24,10 @@
       <div *ngIf="currentLang === 'ca-ES'">
         <div class="card">
           <div>
-            <img width="763" height="429" class="card-head" src="https://contents.idi.es/{{item.data.attributes.params.image}}" alt={{item.data.attributes.title}} title={{item.data.attributes.title}} />
+            <img width="763" height="429" class="card-head" src="https://contents.idi.es/{{item.data.attributes.params.image}}"  title={{item.data.attributes.title}} />
           </div> 
           <div class="card-body">
-            <h4 class="card-title">{{item.data.attributes.title}}</h4>
+            <h2 class="card-title">{{item.data.attributes.title}}</h2>
           </div>
         </div>
       </div>
