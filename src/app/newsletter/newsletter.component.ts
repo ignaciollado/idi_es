@@ -32,6 +32,7 @@ export class NewsletterComponent implements OnInit {
   get primaryEmail() {
     return this.newsLetterForm.get('primaryEmail');
   }
+
   get acceptTerms() {
     return this.newsLetterForm.get('acceptTerms')
   }
@@ -49,10 +50,6 @@ export class NewsletterComponent implements OnInit {
       this.contactService.sendContact(contact)
       .subscribe( (result: any) => {
         console.log (result)
-       /*  this.messageService.messages = result */
-        /* this.message = result */
-        // contactForm.reset({fullName: 'Ignacio lladó vidal', contactPhone: 555555555, primaryEmail: 'nachollv@hotmail.com', userSubject: 'El asunto del mensaje', userMessage: 'este es el mensaje que envió ...',  acceptTerms: false})
-        /* contactForm.reset({fullName: '', contactPhone: null, primaryEmail: '', userSubject: '', userMessage: '',  acceptTerms: false}) */
         this.submitted = true
         this.spinner = false
       }, (err) => {
