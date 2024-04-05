@@ -28,15 +28,13 @@ import { LevelTwoComponent } from './level-two/level-two.component';
 
 const routes: Routes = [
 
-    { path: '', title: "Institut d'Innovació Empresarial de les Illes Balears", component: HomeComponentComponent },
+    { path: '', title: "Agència de desenvolupament regional de les Illes Balears", component: HomeComponentComponent },
     { path: 'idi-who-we-are/:id', title: 'Qui som', component: WhoWeAreIdiComponent },
     { path: 'idi-history-services', title: 'Històric serveis IDI', component: HistoryServicesIdiComponent},
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
-    /* { path: 'idi-level-two/:alias/:id/:idMainCat', component: LevelTwoComponent }, */
     { path: 'detalle-proyecto-idi/:alias/:id/:idMainCat', component: LevelTwoComponent },
     { path: 'detall-projecte-idi/:alias/:id/:idMainCat', component: LevelTwoComponent },
 
-   /*  { path: 'idi-level-one/:alias/:idSubCat/:idMainCat', component:LevelOneComponent}, */
     { path: 'proyecto-idi/:alias/:idSubCat/:idMainCat', component:LevelOneComponent},
     { path: 'projecte-idi/:alias/:idSubCat/:idMainCat', component:LevelOneComponent},
 
