@@ -18,19 +18,14 @@ export class NoticiaDetailComponent implements OnInit {
     private router: Router ) {  }
 
   ngOnInit(): void {
-
     let id = this.route.snapshot.paramMap.get('id')
-    console.log (id)
     this.getUnaNotica(id)
-
     window.scroll(0,0)
-
   }
 
   getUnaNotica ( id:string ) {
 
     this.getNoticia.getArticle(id)
-
       .subscribe( (resp: OneArticle) => {
         this.unaNoticiaAttribute = resp.data.attributes
       })

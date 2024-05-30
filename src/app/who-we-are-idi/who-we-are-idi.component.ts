@@ -52,9 +52,6 @@ export class WhoWeAreIdiComponent implements OnInit {
           this.categorias = categorias.data
           this.categorias = this.categorias.filter( ( item : reqCategory ) => { item.attributes.published === 1 } )
 
-          //this.categorias = this.categorias.filter( ( item : reqCategory ) => item.id != '369' ) /* quito la cat 'Projectes IDI' */
-          //this.categorias = this.categorias.sort( (x:reqCategory, y:reqCategory) => (x.attributes.title > y.attributes.title) ? -1 : 1 )
-
           categorias.data.map( item => {
 
           if ( item.attributes.parent_id.toString() === `${parentCategory}` ) {
