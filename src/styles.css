@@ -19,6 +19,7 @@ body {
   color: rgb(51, 51, 51);
   box-sizing: border-box;
   padding: .5rem;
+  margin-top: 7rem;
 }
 
 ::selection {
