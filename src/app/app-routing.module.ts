@@ -28,7 +28,7 @@ import { LevelTwoComponent } from './level-two/level-two.component';
 
 const routes: Routes = [
 
-    { path: '', title: "Agència de desenvolupament regional de les Illes Balears", redirectTo: 'https://www.adrbalears.es', pathMatch: 'full' },
+    { path: '', title: "Agència de desenvolupament regional de les Illes Balears", component: WhoWeAreIdiComponent },
     { path: 'idi-who-we-are/:id', title: 'Qui som', component: WhoWeAreIdiComponent },
     { path: 'idi-history-services', title: 'Històric serveis IDI', component: HistoryServicesIdiComponent},
     { path: 'idi-service-detail/:id/:idCat', title: 'Detall serveis IDI', component: ServiceIdiDetailComponent },
